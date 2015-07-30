@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Introduction | Vert.x 3.0 文档翻译</title>
+        <title>HTTP client | Vert.x 3.0 文档翻译</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="关于Vert.x 2.0 的文档翻译参考Ver.x 2.0">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
         
         
@@ -15,13 +15,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     
     
-    <link rel="next" href="./Core/core.html" />
+    <link rel="next" href="../Core/using_shared_data_with_vertx.html" />
     
+    
+    <link rel="prev" href="../Core/http_server.html" />
     
 
         
@@ -29,12 +31,12 @@
     <body>
         
         
-    <link rel="stylesheet" href="gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
     
     
 
         
-    <div class="book" data-level="0" data-basepath="." data-revision="Thu Jul 30 2015 21:45:06 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.13.2" data-basepath=".." data-revision="Thu Jul 30 2015 21:45:06 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -51,10 +53,10 @@
 
         
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
                         Introduction
@@ -67,7 +69,7 @@
         <li class="chapter " data-level="1" data-path="Core/core.html">
             
                 
-                    <a href="./Core/core.html">
+                    <a href="../Core/core.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
@@ -83,7 +85,7 @@
         <li class="chapter " data-level="1.1" data-path="Core/in_the_beginning_there_was_vertx.html">
             
                 
-                    <a href="./Core/in_the_beginning_there_was_vertx.html">
+                    <a href="../Core/in_the_beginning_there_was_vertx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
@@ -98,7 +100,7 @@
         <li class="chapter " data-level="1.2" data-path="Core/are_you_fluent.html">
             
                 
-                    <a href="./Core/are_you_fluent.html">
+                    <a href="../Core/are_you_fluent.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
@@ -113,7 +115,7 @@
         <li class="chapter " data-level="1.3" data-path="Core/dont_call_us,_well_call_you.html">
             
                 
-                    <a href="./Core/dont_call_us,_well_call_you.html">
+                    <a href="../Core/dont_call_us,_well_call_you.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.</b>
@@ -128,7 +130,7 @@
         <li class="chapter " data-level="1.4" data-path="Core/dont_block_me.html">
             
                 
-                    <a href="./Core/dont_block_me.html">
+                    <a href="../Core/dont_block_me.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.</b>
@@ -143,7 +145,7 @@
         <li class="chapter " data-level="1.5" data-path="Core/reactor_and_multi-reactor.html">
             
                 
-                    <a href="./Core/reactor_and_multi-reactor.html">
+                    <a href="../Core/reactor_and_multi-reactor.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.5.</b>
@@ -158,7 +160,7 @@
         <li class="chapter " data-level="1.6" data-path="Core/the_golden_rule_-_dont_block_the_event_loop.html">
             
                 
-                    <a href="./Core/the_golden_rule_-_dont_block_the_event_loop.html">
+                    <a href="../Core/the_golden_rule_-_dont_block_the_event_loop.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.6.</b>
@@ -173,7 +175,7 @@
         <li class="chapter " data-level="1.7" data-path="Core/running_blocking_code.html">
             
                 
-                    <a href="./Core/running_blocking_code.html">
+                    <a href="../Core/running_blocking_code.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.7.</b>
@@ -188,7 +190,7 @@
         <li class="chapter " data-level="1.8" data-path="Core/verticles.html">
             
                 
-                    <a href="./Core/verticles.html">
+                    <a href="../Core/verticles.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.8.</b>
@@ -203,7 +205,7 @@
         <li class="chapter " data-level="1.9" data-path="Core/the_event_bus.html">
             
                 
-                    <a href="./Core/the_event_bus.html">
+                    <a href="../Core/the_event_bus.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.9.</b>
@@ -218,7 +220,7 @@
         <li class="chapter " data-level="1.10" data-path="Core/json.html">
             
                 
-                    <a href="./Core/json.html">
+                    <a href="../Core/json.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.10.</b>
@@ -233,7 +235,7 @@
         <li class="chapter " data-level="1.11" data-path="Core/buffers.html">
             
                 
-                    <a href="./Core/buffers.html">
+                    <a href="../Core/buffers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.11.</b>
@@ -248,7 +250,7 @@
         <li class="chapter " data-level="1.12" data-path="Core/writing_tcp_servers_and_clients.html">
             
                 
-                    <a href="./Core/writing_tcp_servers_and_clients.html">
+                    <a href="../Core/writing_tcp_servers_and_clients.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.</b>
@@ -264,7 +266,7 @@
         <li class="chapter " data-level="1.12.1" data-path="Core/tcp_server.html">
             
                 
-                    <a href="./Core/tcp_server.html">
+                    <a href="../Core/tcp_server.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.1.</b>
@@ -279,7 +281,7 @@
         <li class="chapter " data-level="1.12.2" data-path="Core/tcp_client.html">
             
                 
-                    <a href="./Core/tcp_client.html">
+                    <a href="../Core/tcp_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.2.</b>
@@ -294,7 +296,7 @@
         <li class="chapter " data-level="1.12.3" data-path="Core/ssl_tls.html">
             
                 
-                    <a href="./Core/ssl_tls.html">
+                    <a href="../Core/ssl_tls.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.3.</b>
@@ -314,7 +316,7 @@
         <li class="chapter " data-level="1.13" data-path="Core/writing_http_servers_and_clients.html">
             
                 
-                    <a href="./Core/writing_http_servers_and_clients.html">
+                    <a href="../Core/writing_http_servers_and_clients.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.13.</b>
@@ -330,7 +332,7 @@
         <li class="chapter " data-level="1.13.1" data-path="Core/http_server.html">
             
                 
-                    <a href="./Core/http_server.html">
+                    <a href="../Core/http_server.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.13.1.</b>
@@ -342,10 +344,10 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.2" data-path="Core/http_client.html">
+        <li class="chapter active" data-level="1.13.2" data-path="Core/http_client.html">
             
                 
-                    <a href="./Core/http_client.html">
+                    <a href="../Core/http_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.13.2.</b>
@@ -365,7 +367,7 @@
         <li class="chapter " data-level="1.14" data-path="Core/using_shared_data_with_vertx.html">
             
                 
-                    <a href="./Core/using_shared_data_with_vertx.html">
+                    <a href="../Core/using_shared_data_with_vertx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.14.</b>
@@ -380,7 +382,7 @@
         <li class="chapter " data-level="1.15" data-path="Core/using_the_file_system_with_vertx.html">
             
                 
-                    <a href="./Core/using_the_file_system_with_vertx.html">
+                    <a href="../Core/using_the_file_system_with_vertx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.15.</b>
@@ -395,7 +397,7 @@
         <li class="chapter " data-level="1.16" data-path="Core/datagram_sockets_udp.html">
             
                 
-                    <a href="./Core/datagram_sockets_udp.html">
+                    <a href="../Core/datagram_sockets_udp.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.16.</b>
@@ -410,7 +412,7 @@
         <li class="chapter " data-level="1.17" data-path="Core/dns_client.html">
             
                 
-                    <a href="./Core/dns_client.html">
+                    <a href="../Core/dns_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.17.</b>
@@ -425,7 +427,7 @@
         <li class="chapter " data-level="1.18" data-path="Core/streams.html">
             
                 
-                    <a href="./Core/streams.html">
+                    <a href="../Core/streams.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.18.</b>
@@ -440,7 +442,7 @@
         <li class="chapter " data-level="1.19" data-path="Core/parse_tools.html">
             
                 
-                    <a href="./Core/parse_tools.html">
+                    <a href="../Core/parse_tools.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.19.</b>
@@ -455,7 +457,7 @@
         <li class="chapter " data-level="1.20" data-path="Core/thread_safety.html">
             
                 
-                    <a href="./Core/thread_safety.html">
+                    <a href="../Core/thread_safety.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.20.</b>
@@ -470,7 +472,7 @@
         <li class="chapter " data-level="1.21" data-path="Core/metrics_spi.html">
             
                 
-                    <a href="./Core/metrics_spi.html">
+                    <a href="../Core/metrics_spi.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.21.</b>
@@ -485,7 +487,7 @@
         <li class="chapter " data-level="1.22" data-path="Core/clustering.html">
             
                 
-                    <a href="./Core/clustering.html">
+                    <a href="../Core/clustering.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.22.</b>
@@ -500,7 +502,7 @@
         <li class="chapter " data-level="1.23" data-path="Core/security_notes.html">
             
                 
-                    <a href="./Core/security_notes.html">
+                    <a href="../Core/security_notes.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.23.</b>
@@ -528,7 +530,7 @@
         <li class="chapter " data-level="2.1" data-path="Web/re-cap_on_vertx_core_http_servers.html">
             
                 
-                    <a href="./Web/re-cap_on_vertx_core_http_servers.html">
+                    <a href="../Web/re-cap_on_vertx_core_http_servers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.</b>
@@ -765,7 +767,7 @@
         <li class="chapter " data-level="3" data-path="Metrics and monitoring/metrics_and_monitoring.html">
             
                 
-                    <a href="./Metrics and monitoring/metrics_and_monitoring.html">
+                    <a href="../Metrics and monitoring/metrics_and_monitoring.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.</b>
@@ -781,7 +783,7 @@
         <li class="chapter " data-level="3.1" data-path="Metrics and monitoring/features.html">
             
                 
-                    <a href="./Metrics and monitoring/features.html">
+                    <a href="../Metrics and monitoring/features.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.1.</b>
@@ -796,7 +798,7 @@
         <li class="chapter " data-level="3.2" data-path="Metrics and monitoring/getting_started.html">
             
                 
-                    <a href="./Metrics and monitoring/getting_started.html">
+                    <a href="../Metrics and monitoring/getting_started.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.2.</b>
@@ -811,7 +813,7 @@
         <li class="chapter " data-level="3.3" data-path="Metrics and monitoring/metrics_service.html">
             
                 
-                    <a href="./Metrics and monitoring/metrics_service.html">
+                    <a href="../Metrics and monitoring/metrics_service.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.3.</b>
@@ -826,7 +828,7 @@
         <li class="chapter " data-level="3.4" data-path="Metrics and monitoring/naming.html">
             
                 
-                    <a href="./Metrics and monitoring/naming.html">
+                    <a href="../Metrics and monitoring/naming.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.4.</b>
@@ -841,7 +843,7 @@
         <li class="chapter " data-level="3.5" data-path="Metrics and monitoring/retrieving_metrics.html">
             
                 
-                    <a href="./Metrics and monitoring/retrieving_metrics.html">
+                    <a href="../Metrics and monitoring/retrieving_metrics.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.5.</b>
@@ -856,7 +858,7 @@
         <li class="chapter " data-level="3.6" data-path="Metrics and monitoring/data.html">
             
                 
-                    <a href="./Metrics and monitoring/data.html">
+                    <a href="../Metrics and monitoring/data.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.6.</b>
@@ -871,7 +873,7 @@
         <li class="chapter " data-level="3.7" data-path="Metrics and monitoring/the_metrics.html">
             
                 
-                    <a href="./Metrics and monitoring/the_metrics.html">
+                    <a href="../Metrics and monitoring/the_metrics.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.7.</b>
@@ -886,7 +888,7 @@
         <li class="chapter " data-level="3.8" data-path="Metrics and monitoring/jmx.html">
             
                 
-                    <a href="./Metrics and monitoring/jmx.html">
+                    <a href="../Metrics and monitoring/jmx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.8.</b>
@@ -901,7 +903,7 @@
         <li class="chapter " data-level="3.9" data-path="Metrics and monitoring/enabling_remote_jmx.html">
             
                 
-                    <a href="./Metrics and monitoring/enabling_remote_jmx.html">
+                    <a href="../Metrics and monitoring/enabling_remote_jmx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.9.</b>
@@ -916,7 +918,7 @@
         <li class="chapter " data-level="3.10" data-path="Metrics and monitoring/accessing_dropwizard_registry.html">
             
                 
-                    <a href="./Metrics and monitoring/accessing_dropwizard_registry.html">
+                    <a href="../Metrics and monitoring/accessing_dropwizard_registry.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.10.</b>
@@ -1013,7 +1015,7 @@
         <li class="chapter " data-level="5.1" data-path="Data access/jdbc_client.html">
             
                 
-                    <a href="./Data access/jdbc_client.html">
+                    <a href="../Data access/jdbc_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>5.1.</b>
@@ -1028,7 +1030,7 @@
         <li class="chapter " data-level="5.2" data-path="Data access/vertx_mysql_-_postgresql_client.html">
             
                 
-                    <a href="./Data access/vertx_mysql_-_postgresql_client.html">
+                    <a href="../Data access/vertx_mysql_-_postgresql_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>5.2.</b>
@@ -1043,7 +1045,7 @@
         <li class="chapter " data-level="5.3" data-path="Data access/common_sql_interface.html">
             
                 
-                    <a href="./Data access/common_sql_interface.html">
+                    <a href="../Data access/common_sql_interface.html">
                         <i class="fa fa-check"></i>
                         
                             <b>5.3.</b>
@@ -1117,7 +1119,7 @@
         <li class="chapter " data-level="8" data-path="Messaging and Integration/messaging_and_integration.html">
             
                 
-                    <a href="./Messaging and Integration/messaging_and_integration.html">
+                    <a href="../Messaging and Integration/messaging_and_integration.html">
                         <i class="fa fa-check"></i>
                         
                             <b>8.</b>
@@ -1132,7 +1134,7 @@
         <li class="chapter " data-level="9" data-path="Services/services.html">
             
                 
-                    <a href="./Services/services.html">
+                    <a href="../Services/services.html">
                         <i class="fa fa-check"></i>
                         
                             <b>9.</b>
@@ -1244,7 +1246,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Vert.x 3.0 文档翻译</a>
+        <a href="../" >Vert.x 3.0 文档翻译</a>
     </h1>
 </div>
 
@@ -1254,24 +1256,323 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="vert-x-3-0-%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91">Vert.x 3.0 &#x6587;&#x6863;&#x7FFB;&#x8BD1;</h1>
-<p>&#x5173;&#x4E8E;Vert.x 2.0 &#x7684;&#x6587;&#x6863;&#x7FFB;&#x8BD1;&#x53C2;&#x8003;<a href="http://vertx.gnim.wang" target="_blank">Ver.x 2.0</a></p>
-<p>&#x5F15;&#x7528;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;<a href="http://www.csdn.net/article/2015-05-20/2824733-Java" target="_blank">&#x5173;&#x4E8E;Java&#x6846;&#x67B6;Vert.x&#x7684;&#x51E0;&#x70B9;&#x601D;&#x8003;</a>,&#x6765;&#x9610;&#x8FF0;&#x4E00;&#x4E0B;Vert.x 2.0&#x548C;3.0&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
-<p>Vert.x3.0&#x662F;&#x5BF9;Vert.x2.x&#x7684;&#x91CD;&#x5927;&#x5347;&#x7EA7;,&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;package&#x4ECE;org.vertx&#x5230;io.vertx&#x7684;&#x5168;&#x9762;&#x66FF;&#x6362;,&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x6838;&#x5FC3;&#x7C7B;&#x4E5F;&#x90FD;&#x505A;&#x4E86;&#x7834;&#x574F;&#x5F0F;&#x7684;&#x91CD;&#x6784;,&#x51E0;&#x4E4E;&#x5F88;&#x96BE;&#x4ECE;vert.x2&#x7A0B;&#x5E8F;&#x5347;&#x7EA7;&#x5230;vert.x3.0&#x7A0B;&#x5E8F;.&#x5EFA;&#x8BAE;&#x65B0;&#x9879;&#x76EE;&#x76F4;&#x63A5;&#x4ECE;Vert.x3.0&#x5F00;&#x59CB;.&#x4EE5;&#x4E0B;&#x662F;Vert.x3&#x7684;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x5347;&#x7EA7;&#xFF1A;</p>
-<ol>
-<li>Vert.x2.x&#x4E2D;&#x7684;&#x6A21;&#x5757;&#x4F53;&#x7CFB;&#x53BB;&#x6389;&#x4E86;.&#x76EE;&#x524D;Vert.x3.0&#x63A8;&#x8350;&#x7528;Maven&#x7684;&#x6A21;&#x5757;&#x4F53;&#x7CFB;,&#x5F53;&#x7136;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;Maven;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x5728;Vert.x&#x4E0A;&#x7684;&#x4EE3;&#x7801;&#x751F;&#x6210;;</li>
-<li>Vert.x3.0&#x9879;&#x76EE;&#x6784;&#x5EFA;,&#x4ECE;Gradle&#x6539;&#x4E3A;Maven;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x5730;&#x5229;&#x7528;Java8&#x7684;Lambdas&#x8868;&#x8FBE;&#x5F0F;,&#x53EA;&#x652F;&#x6301;Java8;&#x9ED8;&#x8BA4;&#x91C7;&#x7528;&#x6241;&#x5E73;&#x7684;classpath&#x7ED3;&#x6784;;</li>
-<li>Verticle&#x5DE5;&#x5382;&#x65B9;&#x5F0F;&#x7B80;&#x5316;;&#x652F;&#x6301;&#x7528;&#x7F16;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x4F8B;&#x5316;Verticle&#x3001;&#x4EE5;&#x53CA;&#x90E8;&#x7F72;Verticle&#x5B9E;&#x4F8B;;&#x5F53;&#x4F60;&#x963B;&#x585E;Eventloop&#x4E3B;&#x7EBF;&#x7A0B;&#x65F6;&#x8B66;&#x544A;,&#x963B;&#x585E;Reactor&#x4E3B;&#x7EBF;&#x7A0B;&#x662F;&#x4E00;&#x79CD;&#x9519;&#x8BEF;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;;&#x79FB;&#x9664;&#x4E86;PlatformManager&#x6A21;&#x5757;;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x53EF;&#x4EE5;&#x7528;&#x7F16;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x652F;&#x6301;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x5171;&#x4EAB;&#x6570;&#x636E;;&#x5B8C;&#x5168;&#x91CD;&#x5199;&#x4E86;HTTPclient,&#x66F4;&#x5B8C;&#x5584;;</li>
-<li>WebSocketAPI&#x6539;&#x5584;;</li>
-<li>SSL/TLS&#x7684;&#x6539;&#x5584;;</li>
-<li>Eventbus&#x7684;API&#x6539;&#x5584;;</li>
-<li>&#x652F;&#x6301;Eventbus&#x4EE3;&#x7406;;&#x589E;&#x52A0;&#x4E86;&#x6269;&#x5C55;&#x9879;&#x76EE;&#x96C6;&apos;ext&apos;stack;</li>
-<li>&#x589E;&#x52A0;&#x4E86;MongoService,&#x652F;&#x6301;MongoDB&#x7684;&#x7EAF;&#x5F02;&#x6B65;&#x9A71;&#x52A8;;</li>
-<li>&#x5B9E;&#x73B0;ReactiveStreams;</li>
-<li>&#x5BF9;reactive-streams&#x7684;&#x5B9E;&#x73B0;;</li>
-<li>&#x652F;&#x6301;Options&#x7C7B;&#x7684;&#x4F7F;&#x7528;,&#x53EF;&#x4EE5;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5E26;&#x53C2;&#x6570;&#x8FDB;&#x53BB;;</li>
-</ol>
-<p>&#x5BF9;&#x672C;&#x6587;&#x7FFB;&#x8BD1;&#x6709;&#x4EFB;&#x4F55;&#x5F02;&#x8BAE;&#x7684;&#x670B;&#x53CB;&#x53EF;&#x4EE5;&#x5230;QQ&#x7FA4;<code>219655467</code>&#x4E0A;&#x627E;&#x6211;(lol_vertx)&#x8FDB;&#x884C;&#x8BA8;&#x8BBA;,,,</p>
+                        <h1 id="http-client">HTTP client</h1>
+<p>Creating an HTTP client
+You create an HttpClient instance with default options as follows:</p>
+<p>HttpClient client = vertx.createHttpClient();
+If you want to configure options for the client, you create it as follows:</p>
+<p>HttpClientOptions options = new HttpClientOptions().setKeepAlive(false);
+HttpClient client = vertx.createHttpClient();
+Making requests
+The http client is very flexible and there are various ways you can make requests with it.</p>
+<p>Often you want to make many requests to the same host/port with an http client. To avoid you repeating the host/port every time you make a request you can configure the client with a default host/port:</p>
+<p>HttpClientOptions options = new HttpClientOptions().setDefaultHost(&quot;wibble.com&quot;);
+// Can also set default port if you want...
+HttpClient client = vertx.createHttpClient(options);
+client.getNow(&quot;/some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});
+Alternatively if you find yourself making lots of requests to different host/ports with the same client you can simply specify the host/port when doing the request.</p>
+<p>HttpClient client = vertx.createHttpClient();</p>
+<p>// Specify both port and host name
+client.getNow(8080, &quot;myserver.mycompany.com&quot;, &quot;/some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});</p>
+<p>// This time use the default port 80 but specify the host name
+client.getNow(&quot;foo.othercompany.com&quot;, &quot;/other-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});
+Both methods of specifying host/port are supported for all the different ways of making requests with the client.</p>
+<p>Simple requests with no request body</p>
+<p>Often, you&#x2019;ll want to make HTTP requests with no request body. This is usually the case with HTTP GET, OPTIONS and HEAD requests.</p>
+<p>The simplest way to do this with the Vert.x http client is using the methods prefixed with Now. For example getNow.</p>
+<p>These methods create the http request and send it in a single method call and allow you to provide a handler that will be called with the http response when it comes back.</p>
+<p>HttpClient client = vertx.createHttpClient();</p>
+<p>// Send a GET request
+client.getNow(&quot;/some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});</p>
+<p>// Send a GET request
+client.headNow(&quot;/other-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});
+Writing general requests</p>
+<p>At other times you don&#x2019;t know the request method you want to send until run-time. For that use case we provide general purpose request methods such as request which allow you to specify the HTTP method at run-time:</p>
+<p>HttpClient client = vertx.createHttpClient();</p>
+<p>client.request(HttpMethod.GET, &quot;some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+}).end();</p>
+<p>client.request(HttpMethod.POST, &quot;foo-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+}).end(&quot;some-data&quot;);
+Writing request bodies</p>
+<p>Sometimes you&#x2019;ll want to write requests which have a body, or perhaps you want to write headers to a request before sending it.</p>
+<p>To do this you can call one of the specific request methods such as post or one of the general purpose request methods such as request.</p>
+<p>These methods don&#x2019;t send the request immediately, but instead return an instance of HttpClientRequest which can be used to write to the request body or write headers.</p>
+<p>Here are some examples of writing a POST request with a body:</p>
+<p>HttpClient client = vertx.createHttpClient();</p>
+<p>HttpClientRequest request = client.post(&quot;some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});</p>
+<p>// Now do stuff with the request
+request.putHeader(&quot;content-length&quot;, &quot;1000&quot;);
+request.putHeader(&quot;content-type&quot;, &quot;text/plain&quot;);
+request.write(body);</p>
+<p>// Make sure the request is ended when you&apos;re done with it
+request.end();</p>
+<p>// Or fluently:</p>
+<p>client.post(&quot;some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+}).putHeader(&quot;content-length&quot;, &quot;1000&quot;).putHeader(&quot;content-type&quot;, &quot;text/plain&quot;).write(body).end();</p>
+<p>// Or event more simply:</p>
+<p>client.post(&quot;some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+}).putHeader(&quot;content-type&quot;, &quot;text/plain&quot;).end(body);
+Methods exist to write strings in UTF-8 encoding and in any specific encoding and to write buffers:</p>
+<p>request.write(&quot;some data&quot;);</p>
+<p>// Write string encoded in specific encoding
+request.write(&quot;some other data&quot;, &quot;UTF-16&quot;);</p>
+<p>// Write a buffer
+Buffer buffer = Buffer.buffer();
+buffer.appendInt(123).appendLong(245l);
+request.write(buffer);
+If you are just writing a single string or buffer to the HTTP request you can write it and end the request in a single call to the end function.</p>
+<p>request.end(&quot;some simple data&quot;);</p>
+<p>// Write buffer and end the request (send it) in a single call
+Buffer buffer = Buffer.buffer().appendDouble(12.34d).appendLong(432l);
+request.end(buffer);
+When you&#x2019;re writing to a request, the first call to write will result in the request headers being written out to the wire.</p>
+<p>The actual write is asychronous and might not occur until some time after the call has returned.</p>
+<p>Non-chunked HTTP requests with a request body require a Content-Length header to be provided.</p>
+<p>Consequently, if you are not using chunked HTTP then you must set the Content-Length header before writing to the request, as it will be too late otherwise.</p>
+<p>If you are calling one of the end methods that take a string or buffer then Vert.x will automatically calculate and set the Content-Length header before writing the request body.</p>
+<p>If you are using HTTP chunking a a Content-Length header is not required, so you do not have to calculate the size up-front.</p>
+<p>Writing request headers</p>
+<p>You can write headers to a request using the headers multi-map as follows:</p>
+<p>MultiMap headers = request.headers();
+headers.set(&quot;content-type&quot;, &quot;application/json&quot;).set(&quot;other-header&quot;, &quot;foo&quot;);
+The headers are an instance of MultiMap which provides operations for adding, setting and removing entries. Http headers allow more than one value for a specific key.</p>
+<p>You can also write headers using putHeader</p>
+<p>request.putHeader(&quot;content-type&quot;, &quot;application/json&quot;).putHeader(&quot;other-header&quot;, &quot;foo&quot;);
+If you wish to write headers to the request you must do so before any part of the request body is written.</p>
+<p>Ending HTTP requests</p>
+<p>Once you have finished with the HTTP request you must end it with one of the end operations.</p>
+<p>Ending a request causes any headers to be written, if they have not already been written and the request to be marked as complete.</p>
+<p>Requests can be ended in several ways. With no arguments the request is simply ended:</p>
+<p>request.end();
+Or a string or buffer can be provided in the call to end. This is like calling write with the string or buffer before calling end with no arguments</p>
+<p>request.end(&quot;some-data&quot;);</p>
+<p>// End it with a buffer
+Buffer buffer = Buffer.buffer().appendFloat(12.3f).appendInt(321);
+request.end(buffer);
+Chunked HTTP requests</p>
+<p>Vert.x supports HTTP Chunked Transfer Encoding for requests.</p>
+<p>This allows the HTTP request body to be written in chunks, and is normally used when a large request body is being streamed to the server, whose size is not known in advance.</p>
+<p>You put the HTTP request into chunked mode using setChunked.</p>
+<p>In chunked mode each call to write will cause a new chunk to be written to the wire. In chunked mode there is no need to set the Content-Length of the request up-front.</p>
+<p>request.setChunked(true);</p>
+<p>// Write some chunks
+for (int i = 0; i &lt; 10; i++) {
+  request.write(&quot;this-is-chunk-&quot; + i);
+}</p>
+<p>request.end();
+Request timeouts</p>
+<p>You can set a timeout for a specific http request using setTimeout.</p>
+<p>If the request does not return any data within the timeout period an exception will be passed to the exception handler (if provided) and the request will be closed.</p>
+<p>Handling exceptions</p>
+<p>You can handle exceptions corresponding to a request by setting an exception handler on the HttpClientRequest instance:</p>
+<p>HttpClientRequest request = client.post(&quot;some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});
+request.exceptionHandler(e -&gt; {
+  System.out.println(&quot;Received exception: &quot; + e.getMessage());
+  e.printStackTrace();
+});
+TODO - what about exceptions in the getNow methods where no exception handler can be provided??</p>
+<p>Maybe need a catch all exception handler??</p>
+<p>Specifying a handler on the client request</p>
+<p>Instead of providing a response handler in the call to create the client request object, alternatively, you can not provide a handler when the request is created and set it later on the request object itself, using handler, for example:</p>
+<p>HttpClientRequest request = client.post(&quot;some-uri&quot;);
+request.handler(response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});
+Using the request as a stream</p>
+<p>The HttpClientRequest instance is also a WriteStream which means you can pump to it from any ReadStream instance.</p>
+<p>For, example, you could pump a file on disk to a http request body as follows:</p>
+<p>request.setChunked(true);
+Pump pump = Pump.pump(file, request);
+file.endHandler(v -&gt; request.end());
+pump.start();
+Handling http responses
+You receive an instance of HttpClientResponse into the handler that you specify in of the request methods or by setting a handler directly on the HttpClientRequest object.</p>
+<p>You can query the status code and the status message of the response with statusCode and statusMessage.</p>
+<p>client.getNow(&quot;some-uri&quot;, response -&gt; {
+  // the status code - e.g. 200 or 404
+  System.out.println(&quot;Status code is &quot; + response.statusCode());</p>
+<p>  // the status message e.g. &quot;OK&quot; or &quot;Not Found&quot;.
+  System.out.println(&quot;Status message is &quot; + response.statusMessage());
+});
+Using the response as a stream</p>
+<p>The HttpClientResponse instance is also a ReadStream which means you can pump it to any WriteStream instance.</p>
+<p>Response headers and trailers</p>
+<p>Http responses can contain headers. Use headers to get the headers.</p>
+<p>The object returned is a MultiMap as HTTP headers can contain multiple values for single keys.</p>
+<p>String contentType = response.headers().get(&quot;content-type&quot;);
+String contentLength = response.headers().get(&quot;content-lengh&quot;);
+Chunked HTTP responses can also contain trailers - these are sent in the last chunk of the response body.</p>
+<p>You use trailers to get the trailers. Trailers are also a MultiMap.</p>
+<p>Reading the request body</p>
+<p>The response handler is called when the headers of the response have been read from the wire.</p>
+<p>If the response has a body this might arrive in several pieces some time after the headers have been read. We don&#x2019;t wait for all the body to arrive before calling the response handler as the response could be very large and we might be waiting a long time, or run out of memory for large responses.</p>
+<p>As parts of the response body arrive, the handler is called with a Buffer representing the piece of the body:</p>
+<p>client.getNow(&quot;some-uri&quot;, response -&gt; {</p>
+<p>  response.handler(buffer -&gt; {
+    System.out.println(&quot;Received a part of the response body: &quot; + buffer);
+  });
+});
+If you know the response body is not very large and want to aggregate it all in memory before handling it, you can either aggregate it yourself:</p>
+<p>client.getNow(&quot;some-uri&quot;, response -&gt; {</p>
+<p>  // Create an empty buffer
+  Buffer totalBuffer = Buffer.buffer();</p>
+<p>  response.handler(buffer -&gt; {
+    System.out.println(&quot;Received a part of the response body: &quot; + buffer.length());</p>
+<pre><code>totalBuffer.appendBuffer(buffer);
+</code></pre><p>  });</p>
+<p>  response.endHandler(v -&gt; {
+    // Now all the body has been read
+    System.out.println(&quot;Total response body length is &quot; + totalBuffer.length());
+  });
+});
+Or you can use the convenience bodyHandler which is called with the entire body when the response has been fully read:</p>
+<p>client.getNow(&quot;some-uri&quot;, response -&gt; {</p>
+<p>  response.bodyHandler(totalBuffer -&gt; {
+    // Now all the body has been read
+    System.out.println(&quot;Total response body length is &quot; + totalBuffer.length());
+  });
+});
+Response end handler</p>
+<p>The response endHandler is called when the entire response body has been read or immediately after the headers have been read and the response handler has been called if there is no body.</p>
+<p>Reading cookies from the response</p>
+<p>You can retrieve the list of cookies from a response using cookies.</p>
+<p>Alternatively you can just parse the Set-Cookie headers yourself in the response.</p>
+<p>100-Continue handling</p>
+<p>According to the HTTP 1.1 specification a client can set a header Expect: 100-Continue and send the request header before sending the rest of the request body.</p>
+<p>The server can then respond with an interim response status Status: 100 (Continue) to signify to the client that it is ok to send the rest of the body.</p>
+<p>The idea here is it allows the server to authorise and accept/reject the request before large amounts of data are sent. Sending large amounts of data if the request might not be accepted is a waste of bandwidth and ties up the server in reading data that it will just discard.</p>
+<p>Vert.x allows you to set a continueHandler on the client request object</p>
+<p>This will be called if the server sends back a Status: 100 (Continue) response to signify that it is ok to send the rest of the request.</p>
+<p>This is used in conjunction with <code>sendHead</code>to send the head of the request.</p>
+<p>Here&#x2019;s an example:</p>
+<p>HttpClientRequest request = client.put(&quot;some-uri&quot;, response -&gt; {
+  System.out.println(&quot;Received response with status code &quot; + response.statusCode());
+});</p>
+<p>request.putHeader(&quot;Expect&quot;, &quot;100-Continue&quot;);</p>
+<p>request.continueHandler(v -&gt; {
+  // OK to send rest of body
+  request.write(&quot;Some data&quot;);
+  request.write(&quot;Some more data&quot;);
+  request.end();
+});
+Enabling compression on the client
+The http client comes with support for HTTP Compression out of the box.</p>
+<p>This means the client can let the remote http server know that it supports compression, and will be able to handle compressed response bodies.</p>
+<p>An http server is free to either compress with one of the supported compression algorithms or to send the body back without compressing it at all. So this is only a hint for the Http server which it may ignore at will.</p>
+<p>To tell the http server which compression is supported by the client it will include an Accept-Encoding header with the supported compression algorithm as value. Multiple compression algorithms are supported. In case of Vert.x this will result in the following header added:</p>
+<p>Accept-Encoding: gzip, deflate
+The server will choose then from one of these. You can detect if a server ompressed the body by checking for the Content-Encoding header in the response sent back from it.</p>
+<p>If the body of the response was compressed via gzip it will include for example the following header:</p>
+<p>Content-Encoding: gzip
+To enable compression set setTryUseCompression on the options used when creating the client.</p>
+<p>By default compression is disabled.</p>
+<p>Pooling and keep alive
+Http keep alive allows http connections to be used for more than one request. This can be a more efficient use of connections when you&#x2019;re making multiple requests to the same server.</p>
+<p>The http client supports pooling of connections, allowing you to reuse connections between requests.</p>
+<p>For pooling to work, keep alive must be true using setKeepAlive on the options used when configuring the client. The default value is true.</p>
+<p>When keep alive is enabled. Vert.x will add a Connection: Keep-Alive header to each HTTP request sent.</p>
+<p>The maximum number of connections to pool for each server is configured using setMaxPoolSize</p>
+<p>When making a request with pooling enabled, Vert.x will create a new connection if there are less than the maximum number of connections already created for that server, otherwise it will add the request to a queue.</p>
+<p>When a response returns, if there are pending requests for the server, then the connection will be reused, otherwise it will be closed.</p>
+<p>This gives the benefits of keep alive when the client is loaded but means we don&#x2019;t keep connections hanging around unnecessarily when there would be no benefits anyway.</p>
+<p>Pipe-lining
+The client also supports pipe-lining of requests on a connection.</p>
+<p>Pipe-lining means another request is sent on the same connection before the response from the preceding one has returned. Pipe-lining is not appropriate for all requests.</p>
+<p>To enable pipe-lining, it must be enabled using setPipelining. By default pipe-lining is disabled.</p>
+<p>When pipe-lining is enabled requests will be written to connections without waiting for previous responses to return.</p>
+<p>When pipe-line responses return at the client, the connection will be automatically closed when all in-flight responses have returned and there are no outstanding pending requests to write.</p>
+<p>Server sharing
+TODO round robin requests etc</p>
+<p>Using HTTPS with Vert.x
+Vert.x http servers and clients can be configured to use HTTPS in exactly the same way as net servers.</p>
+<p>Please see configuring net servers to use SSL for more information.</p>
+<p>WebSockets
+WebSockets are a web technology that allows a full duplex socket-like connection between HTTP servers and HTTP clients (typically browsers).</p>
+<p>Vert.x supports WebSockets on both the client and server-side.</p>
+<p>WebSockets on the server</p>
+<p>There are two ways of handling WebSockets on the server side.</p>
+<p>WebSocket handler</p>
+<p>The first way involves providing a websocketHandler on the server instance.</p>
+<p>When a WebSocket connection is made to the server, the handler will be called, passing in an instance of ServerWebSocket.</p>
+<p>server.websocketHandler(websocket -&gt; {
+  System.out.println(&quot;Connected!&quot;);
+});
+You can choose to reject the WebSocket by calling reject.</p>
+<p>server.websocketHandler(websocket -&gt; {
+  if (websocket.path().equals(&quot;/myapi&quot;)) {
+    websocket.reject();
+  } else {
+    // Do something
+  }
+});
+Upgrading to WebSocket</p>
+<p>The second way of handling WebSockets is to handle the HTTP Upgrade request that was sent from the client, and call upgrade on the server request.</p>
+<p>server.requestHandler(request -&gt; {
+  if (request.path().equals(&quot;/myapi&quot;)) {</p>
+<pre><code>ServerWebSocket websocket = request.upgrade();
+// Do something
+</code></pre><p>  } else {
+    // Reject
+    request.response().setStatusCode(400).end();
+  }
+});
+The server WebSocket</p>
+<p>The ServerWebSocket instance enables you to retrieve the headers, path path}, query and uri URI} of the HTTP request of the WebSocket handshake.</p>
+<p>WebSockets on the client</p>
+<p>The Vert.x HttpClient supports WebSockets.</p>
+<p>You can connect a WebSocket to a server using one of the websocket operations and providing a handler.</p>
+<p>The handler will be called with an instance of WebSocket when the connection has been made:</p>
+<p>client.websocket(&quot;/some-uri&quot;, websocket -&gt; {
+  System.out.println(&quot;Connected!&quot;);
+});
+Writing messages to WebSockets</p>
+<p>If you wish to write a single binary WebSocket message containing a single WebSocket frame to the WebSocket (a common case) the simplest way to do this is to use writeMessage:</p>
+<p>Buffer buffer = Buffer.buffer().appendInt(123).appendFloat(1.23f);</p>
+<p>websocket.writeMessage(buffer);
+If the websocket message is larger than the maximum websocket frame size as configured with setMaxWebsocketFrameSize then Vert.x will split it into multiple WebSocket frames before sending it on the wire.</p>
+<p>Writing frames to WebSockets</p>
+<p>A WebSocket message can be composed of multiple frames. In this case the first frame is either a binary or text frame followed by one or more continuation frames.</p>
+<p>The last frame in the message is marked as final.</p>
+<p>To send a message consisting of multiple frames you create frames using WebSocketFrame.binaryFrame , WebSocketFrame.textFrame or WebSocketFrame.continuationFrame and write them to the WebSocket using writeFrame.</p>
+<p>Here&#x2019;s an example for binary frames:</p>
+<p>WebSocketFrame frame1 = WebSocketFrame.binaryFrame(buffer1, false);
+websocket.writeFrame(frame1);</p>
+<p>WebSocketFrame frame2 = WebSocketFrame.continuationFrame(buffer2, false);
+websocket.writeFrame(frame2);</p>
+<p>// Write the final frame
+WebSocketFrame frame3 = WebSocketFrame.continuationFrame(buffer2, true);
+websocket.writeFrame(frame3);
+Reading frames from WebSockets</p>
+<p>To read frames from a WebSocket you use the frameHandler.</p>
+<p>The frame handler will be called with instances of WebSocketFrame when a frame arrives, for example:</p>
+<p>websocket.frameHandler(frame -&gt; {
+  System.out.println(&quot;Received a frame of size!&quot;);
+});
+Closing WebSockets</p>
+<p>Use close to close the WebSocket connection when you have finished with it.</p>
+<p>Streaming WebSockets</p>
+<p>The WebSocket instance is also a ReadStream and a WriteStream so it can be used with pumps.</p>
+<p>When using a WebSocket as a write stream or a read stream it can only be used with WebSockets connections that are used with binary frames that are no split over multiple frames.</p>
+<p>Automatic clean-up in verticles
+If you&#x2019;re creating http servers and clients from inside verticles, those servers and clients will be automatically closed when the verticle is undeployed.</p>
 
                     
                     </section>
@@ -1282,14 +1583,16 @@
         </div>
 
         
+        <a href="../Core/http_server.html" class="navigation navigation-prev " aria-label="Previous page: HTTP Server"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./Core/core.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Core"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="../Core/using_shared_data_with_vertx.html" class="navigation navigation-next " aria-label="Next page: Using Shared Data with Vert.x"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
 <script>
 require(["gitbook"], function(gitbook) {

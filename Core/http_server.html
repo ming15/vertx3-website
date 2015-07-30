@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Introduction | Vert.x 3.0 文档翻译</title>
+        <title>HTTP Server | Vert.x 3.0 文档翻译</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="关于Vert.x 2.0 的文档翻译参考Ver.x 2.0">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
         
         
@@ -15,13 +15,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     
     
-    <link rel="next" href="./Core/core.html" />
+    <link rel="next" href="../Core/http_client.html" />
     
+    
+    <link rel="prev" href="../Core/writing_http_servers_and_clients.html" />
     
 
         
@@ -29,12 +31,12 @@
     <body>
         
         
-    <link rel="stylesheet" href="gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
     
     
 
         
-    <div class="book" data-level="0" data-basepath="." data-revision="Thu Jul 30 2015 21:45:06 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.13.1" data-basepath=".." data-revision="Thu Jul 30 2015 21:45:06 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -51,10 +53,10 @@
 
         
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
                         Introduction
@@ -67,7 +69,7 @@
         <li class="chapter " data-level="1" data-path="Core/core.html">
             
                 
-                    <a href="./Core/core.html">
+                    <a href="../Core/core.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
@@ -83,7 +85,7 @@
         <li class="chapter " data-level="1.1" data-path="Core/in_the_beginning_there_was_vertx.html">
             
                 
-                    <a href="./Core/in_the_beginning_there_was_vertx.html">
+                    <a href="../Core/in_the_beginning_there_was_vertx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
@@ -98,7 +100,7 @@
         <li class="chapter " data-level="1.2" data-path="Core/are_you_fluent.html">
             
                 
-                    <a href="./Core/are_you_fluent.html">
+                    <a href="../Core/are_you_fluent.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
@@ -113,7 +115,7 @@
         <li class="chapter " data-level="1.3" data-path="Core/dont_call_us,_well_call_you.html">
             
                 
-                    <a href="./Core/dont_call_us,_well_call_you.html">
+                    <a href="../Core/dont_call_us,_well_call_you.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.</b>
@@ -128,7 +130,7 @@
         <li class="chapter " data-level="1.4" data-path="Core/dont_block_me.html">
             
                 
-                    <a href="./Core/dont_block_me.html">
+                    <a href="../Core/dont_block_me.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.</b>
@@ -143,7 +145,7 @@
         <li class="chapter " data-level="1.5" data-path="Core/reactor_and_multi-reactor.html">
             
                 
-                    <a href="./Core/reactor_and_multi-reactor.html">
+                    <a href="../Core/reactor_and_multi-reactor.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.5.</b>
@@ -158,7 +160,7 @@
         <li class="chapter " data-level="1.6" data-path="Core/the_golden_rule_-_dont_block_the_event_loop.html">
             
                 
-                    <a href="./Core/the_golden_rule_-_dont_block_the_event_loop.html">
+                    <a href="../Core/the_golden_rule_-_dont_block_the_event_loop.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.6.</b>
@@ -173,7 +175,7 @@
         <li class="chapter " data-level="1.7" data-path="Core/running_blocking_code.html">
             
                 
-                    <a href="./Core/running_blocking_code.html">
+                    <a href="../Core/running_blocking_code.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.7.</b>
@@ -188,7 +190,7 @@
         <li class="chapter " data-level="1.8" data-path="Core/verticles.html">
             
                 
-                    <a href="./Core/verticles.html">
+                    <a href="../Core/verticles.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.8.</b>
@@ -203,7 +205,7 @@
         <li class="chapter " data-level="1.9" data-path="Core/the_event_bus.html">
             
                 
-                    <a href="./Core/the_event_bus.html">
+                    <a href="../Core/the_event_bus.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.9.</b>
@@ -218,7 +220,7 @@
         <li class="chapter " data-level="1.10" data-path="Core/json.html">
             
                 
-                    <a href="./Core/json.html">
+                    <a href="../Core/json.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.10.</b>
@@ -233,7 +235,7 @@
         <li class="chapter " data-level="1.11" data-path="Core/buffers.html">
             
                 
-                    <a href="./Core/buffers.html">
+                    <a href="../Core/buffers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.11.</b>
@@ -248,7 +250,7 @@
         <li class="chapter " data-level="1.12" data-path="Core/writing_tcp_servers_and_clients.html">
             
                 
-                    <a href="./Core/writing_tcp_servers_and_clients.html">
+                    <a href="../Core/writing_tcp_servers_and_clients.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.</b>
@@ -264,7 +266,7 @@
         <li class="chapter " data-level="1.12.1" data-path="Core/tcp_server.html">
             
                 
-                    <a href="./Core/tcp_server.html">
+                    <a href="../Core/tcp_server.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.1.</b>
@@ -279,7 +281,7 @@
         <li class="chapter " data-level="1.12.2" data-path="Core/tcp_client.html">
             
                 
-                    <a href="./Core/tcp_client.html">
+                    <a href="../Core/tcp_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.2.</b>
@@ -294,7 +296,7 @@
         <li class="chapter " data-level="1.12.3" data-path="Core/ssl_tls.html">
             
                 
-                    <a href="./Core/ssl_tls.html">
+                    <a href="../Core/ssl_tls.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.12.3.</b>
@@ -314,7 +316,7 @@
         <li class="chapter " data-level="1.13" data-path="Core/writing_http_servers_and_clients.html">
             
                 
-                    <a href="./Core/writing_http_servers_and_clients.html">
+                    <a href="../Core/writing_http_servers_and_clients.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.13.</b>
@@ -327,10 +329,10 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="Core/http_server.html">
+        <li class="chapter active" data-level="1.13.1" data-path="Core/http_server.html">
             
                 
-                    <a href="./Core/http_server.html">
+                    <a href="../Core/http_server.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.13.1.</b>
@@ -345,7 +347,7 @@
         <li class="chapter " data-level="1.13.2" data-path="Core/http_client.html">
             
                 
-                    <a href="./Core/http_client.html">
+                    <a href="../Core/http_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.13.2.</b>
@@ -365,7 +367,7 @@
         <li class="chapter " data-level="1.14" data-path="Core/using_shared_data_with_vertx.html">
             
                 
-                    <a href="./Core/using_shared_data_with_vertx.html">
+                    <a href="../Core/using_shared_data_with_vertx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.14.</b>
@@ -380,7 +382,7 @@
         <li class="chapter " data-level="1.15" data-path="Core/using_the_file_system_with_vertx.html">
             
                 
-                    <a href="./Core/using_the_file_system_with_vertx.html">
+                    <a href="../Core/using_the_file_system_with_vertx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.15.</b>
@@ -395,7 +397,7 @@
         <li class="chapter " data-level="1.16" data-path="Core/datagram_sockets_udp.html">
             
                 
-                    <a href="./Core/datagram_sockets_udp.html">
+                    <a href="../Core/datagram_sockets_udp.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.16.</b>
@@ -410,7 +412,7 @@
         <li class="chapter " data-level="1.17" data-path="Core/dns_client.html">
             
                 
-                    <a href="./Core/dns_client.html">
+                    <a href="../Core/dns_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.17.</b>
@@ -425,7 +427,7 @@
         <li class="chapter " data-level="1.18" data-path="Core/streams.html">
             
                 
-                    <a href="./Core/streams.html">
+                    <a href="../Core/streams.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.18.</b>
@@ -440,7 +442,7 @@
         <li class="chapter " data-level="1.19" data-path="Core/parse_tools.html">
             
                 
-                    <a href="./Core/parse_tools.html">
+                    <a href="../Core/parse_tools.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.19.</b>
@@ -455,7 +457,7 @@
         <li class="chapter " data-level="1.20" data-path="Core/thread_safety.html">
             
                 
-                    <a href="./Core/thread_safety.html">
+                    <a href="../Core/thread_safety.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.20.</b>
@@ -470,7 +472,7 @@
         <li class="chapter " data-level="1.21" data-path="Core/metrics_spi.html">
             
                 
-                    <a href="./Core/metrics_spi.html">
+                    <a href="../Core/metrics_spi.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.21.</b>
@@ -485,7 +487,7 @@
         <li class="chapter " data-level="1.22" data-path="Core/clustering.html">
             
                 
-                    <a href="./Core/clustering.html">
+                    <a href="../Core/clustering.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.22.</b>
@@ -500,7 +502,7 @@
         <li class="chapter " data-level="1.23" data-path="Core/security_notes.html">
             
                 
-                    <a href="./Core/security_notes.html">
+                    <a href="../Core/security_notes.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.23.</b>
@@ -528,7 +530,7 @@
         <li class="chapter " data-level="2.1" data-path="Web/re-cap_on_vertx_core_http_servers.html">
             
                 
-                    <a href="./Web/re-cap_on_vertx_core_http_servers.html">
+                    <a href="../Web/re-cap_on_vertx_core_http_servers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.</b>
@@ -765,7 +767,7 @@
         <li class="chapter " data-level="3" data-path="Metrics and monitoring/metrics_and_monitoring.html">
             
                 
-                    <a href="./Metrics and monitoring/metrics_and_monitoring.html">
+                    <a href="../Metrics and monitoring/metrics_and_monitoring.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.</b>
@@ -781,7 +783,7 @@
         <li class="chapter " data-level="3.1" data-path="Metrics and monitoring/features.html">
             
                 
-                    <a href="./Metrics and monitoring/features.html">
+                    <a href="../Metrics and monitoring/features.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.1.</b>
@@ -796,7 +798,7 @@
         <li class="chapter " data-level="3.2" data-path="Metrics and monitoring/getting_started.html">
             
                 
-                    <a href="./Metrics and monitoring/getting_started.html">
+                    <a href="../Metrics and monitoring/getting_started.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.2.</b>
@@ -811,7 +813,7 @@
         <li class="chapter " data-level="3.3" data-path="Metrics and monitoring/metrics_service.html">
             
                 
-                    <a href="./Metrics and monitoring/metrics_service.html">
+                    <a href="../Metrics and monitoring/metrics_service.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.3.</b>
@@ -826,7 +828,7 @@
         <li class="chapter " data-level="3.4" data-path="Metrics and monitoring/naming.html">
             
                 
-                    <a href="./Metrics and monitoring/naming.html">
+                    <a href="../Metrics and monitoring/naming.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.4.</b>
@@ -841,7 +843,7 @@
         <li class="chapter " data-level="3.5" data-path="Metrics and monitoring/retrieving_metrics.html">
             
                 
-                    <a href="./Metrics and monitoring/retrieving_metrics.html">
+                    <a href="../Metrics and monitoring/retrieving_metrics.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.5.</b>
@@ -856,7 +858,7 @@
         <li class="chapter " data-level="3.6" data-path="Metrics and monitoring/data.html">
             
                 
-                    <a href="./Metrics and monitoring/data.html">
+                    <a href="../Metrics and monitoring/data.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.6.</b>
@@ -871,7 +873,7 @@
         <li class="chapter " data-level="3.7" data-path="Metrics and monitoring/the_metrics.html">
             
                 
-                    <a href="./Metrics and monitoring/the_metrics.html">
+                    <a href="../Metrics and monitoring/the_metrics.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.7.</b>
@@ -886,7 +888,7 @@
         <li class="chapter " data-level="3.8" data-path="Metrics and monitoring/jmx.html">
             
                 
-                    <a href="./Metrics and monitoring/jmx.html">
+                    <a href="../Metrics and monitoring/jmx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.8.</b>
@@ -901,7 +903,7 @@
         <li class="chapter " data-level="3.9" data-path="Metrics and monitoring/enabling_remote_jmx.html">
             
                 
-                    <a href="./Metrics and monitoring/enabling_remote_jmx.html">
+                    <a href="../Metrics and monitoring/enabling_remote_jmx.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.9.</b>
@@ -916,7 +918,7 @@
         <li class="chapter " data-level="3.10" data-path="Metrics and monitoring/accessing_dropwizard_registry.html">
             
                 
-                    <a href="./Metrics and monitoring/accessing_dropwizard_registry.html">
+                    <a href="../Metrics and monitoring/accessing_dropwizard_registry.html">
                         <i class="fa fa-check"></i>
                         
                             <b>3.10.</b>
@@ -1013,7 +1015,7 @@
         <li class="chapter " data-level="5.1" data-path="Data access/jdbc_client.html">
             
                 
-                    <a href="./Data access/jdbc_client.html">
+                    <a href="../Data access/jdbc_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>5.1.</b>
@@ -1028,7 +1030,7 @@
         <li class="chapter " data-level="5.2" data-path="Data access/vertx_mysql_-_postgresql_client.html">
             
                 
-                    <a href="./Data access/vertx_mysql_-_postgresql_client.html">
+                    <a href="../Data access/vertx_mysql_-_postgresql_client.html">
                         <i class="fa fa-check"></i>
                         
                             <b>5.2.</b>
@@ -1043,7 +1045,7 @@
         <li class="chapter " data-level="5.3" data-path="Data access/common_sql_interface.html">
             
                 
-                    <a href="./Data access/common_sql_interface.html">
+                    <a href="../Data access/common_sql_interface.html">
                         <i class="fa fa-check"></i>
                         
                             <b>5.3.</b>
@@ -1117,7 +1119,7 @@
         <li class="chapter " data-level="8" data-path="Messaging and Integration/messaging_and_integration.html">
             
                 
-                    <a href="./Messaging and Integration/messaging_and_integration.html">
+                    <a href="../Messaging and Integration/messaging_and_integration.html">
                         <i class="fa fa-check"></i>
                         
                             <b>8.</b>
@@ -1132,7 +1134,7 @@
         <li class="chapter " data-level="9" data-path="Services/services.html">
             
                 
-                    <a href="./Services/services.html">
+                    <a href="../Services/services.html">
                         <i class="fa fa-check"></i>
                         
                             <b>9.</b>
@@ -1244,7 +1246,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Vert.x 3.0 文档翻译</a>
+        <a href="../" >Vert.x 3.0 文档翻译</a>
     </h1>
 </div>
 
@@ -1254,24 +1256,311 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="vert-x-3-0-%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91">Vert.x 3.0 &#x6587;&#x6863;&#x7FFB;&#x8BD1;</h1>
-<p>&#x5173;&#x4E8E;Vert.x 2.0 &#x7684;&#x6587;&#x6863;&#x7FFB;&#x8BD1;&#x53C2;&#x8003;<a href="http://vertx.gnim.wang" target="_blank">Ver.x 2.0</a></p>
-<p>&#x5F15;&#x7528;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;<a href="http://www.csdn.net/article/2015-05-20/2824733-Java" target="_blank">&#x5173;&#x4E8E;Java&#x6846;&#x67B6;Vert.x&#x7684;&#x51E0;&#x70B9;&#x601D;&#x8003;</a>,&#x6765;&#x9610;&#x8FF0;&#x4E00;&#x4E0B;Vert.x 2.0&#x548C;3.0&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
-<p>Vert.x3.0&#x662F;&#x5BF9;Vert.x2.x&#x7684;&#x91CD;&#x5927;&#x5347;&#x7EA7;,&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;package&#x4ECE;org.vertx&#x5230;io.vertx&#x7684;&#x5168;&#x9762;&#x66FF;&#x6362;,&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x6838;&#x5FC3;&#x7C7B;&#x4E5F;&#x90FD;&#x505A;&#x4E86;&#x7834;&#x574F;&#x5F0F;&#x7684;&#x91CD;&#x6784;,&#x51E0;&#x4E4E;&#x5F88;&#x96BE;&#x4ECE;vert.x2&#x7A0B;&#x5E8F;&#x5347;&#x7EA7;&#x5230;vert.x3.0&#x7A0B;&#x5E8F;.&#x5EFA;&#x8BAE;&#x65B0;&#x9879;&#x76EE;&#x76F4;&#x63A5;&#x4ECE;Vert.x3.0&#x5F00;&#x59CB;.&#x4EE5;&#x4E0B;&#x662F;Vert.x3&#x7684;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x5347;&#x7EA7;&#xFF1A;</p>
-<ol>
-<li>Vert.x2.x&#x4E2D;&#x7684;&#x6A21;&#x5757;&#x4F53;&#x7CFB;&#x53BB;&#x6389;&#x4E86;.&#x76EE;&#x524D;Vert.x3.0&#x63A8;&#x8350;&#x7528;Maven&#x7684;&#x6A21;&#x5757;&#x4F53;&#x7CFB;,&#x5F53;&#x7136;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;Maven;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x5728;Vert.x&#x4E0A;&#x7684;&#x4EE3;&#x7801;&#x751F;&#x6210;;</li>
-<li>Vert.x3.0&#x9879;&#x76EE;&#x6784;&#x5EFA;,&#x4ECE;Gradle&#x6539;&#x4E3A;Maven;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x5730;&#x5229;&#x7528;Java8&#x7684;Lambdas&#x8868;&#x8FBE;&#x5F0F;,&#x53EA;&#x652F;&#x6301;Java8;&#x9ED8;&#x8BA4;&#x91C7;&#x7528;&#x6241;&#x5E73;&#x7684;classpath&#x7ED3;&#x6784;;</li>
-<li>Verticle&#x5DE5;&#x5382;&#x65B9;&#x5F0F;&#x7B80;&#x5316;;&#x652F;&#x6301;&#x7528;&#x7F16;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x4F8B;&#x5316;Verticle&#x3001;&#x4EE5;&#x53CA;&#x90E8;&#x7F72;Verticle&#x5B9E;&#x4F8B;;&#x5F53;&#x4F60;&#x963B;&#x585E;Eventloop&#x4E3B;&#x7EBF;&#x7A0B;&#x65F6;&#x8B66;&#x544A;,&#x963B;&#x585E;Reactor&#x4E3B;&#x7EBF;&#x7A0B;&#x662F;&#x4E00;&#x79CD;&#x9519;&#x8BEF;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;;&#x79FB;&#x9664;&#x4E86;PlatformManager&#x6A21;&#x5757;;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x53EF;&#x4EE5;&#x7528;&#x7F16;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x652F;&#x6301;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x5171;&#x4EAB;&#x6570;&#x636E;;&#x5B8C;&#x5168;&#x91CD;&#x5199;&#x4E86;HTTPclient,&#x66F4;&#x5B8C;&#x5584;;</li>
-<li>WebSocketAPI&#x6539;&#x5584;;</li>
-<li>SSL/TLS&#x7684;&#x6539;&#x5584;;</li>
-<li>Eventbus&#x7684;API&#x6539;&#x5584;;</li>
-<li>&#x652F;&#x6301;Eventbus&#x4EE3;&#x7406;;&#x589E;&#x52A0;&#x4E86;&#x6269;&#x5C55;&#x9879;&#x76EE;&#x96C6;&apos;ext&apos;stack;</li>
-<li>&#x589E;&#x52A0;&#x4E86;MongoService,&#x652F;&#x6301;MongoDB&#x7684;&#x7EAF;&#x5F02;&#x6B65;&#x9A71;&#x52A8;;</li>
-<li>&#x5B9E;&#x73B0;ReactiveStreams;</li>
-<li>&#x5BF9;reactive-streams&#x7684;&#x5B9E;&#x73B0;;</li>
-<li>&#x652F;&#x6301;Options&#x7C7B;&#x7684;&#x4F7F;&#x7528;,&#x53EF;&#x4EE5;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5E26;&#x53C2;&#x6570;&#x8FDB;&#x53BB;;</li>
-</ol>
-<p>&#x5BF9;&#x672C;&#x6587;&#x7FFB;&#x8BD1;&#x6709;&#x4EFB;&#x4F55;&#x5F02;&#x8BAE;&#x7684;&#x670B;&#x53CB;&#x53EF;&#x4EE5;&#x5230;QQ&#x7FA4;<code>219655467</code>&#x4E0A;&#x627E;&#x6211;(lol_vertx)&#x8FDB;&#x884C;&#x8BA8;&#x8BBA;,,,</p>
+                        <h1 id="http-server">HTTP Server</h1>
+<h2 id="creating-an-http-server">Creating an HTTP Server</h2>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5168;&#x90E8;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;HTTP&#x670D;&#x52A1;&#x5668;&#xFF1A;</p>
+<pre><code class="lang-java">HttpServer server = vertx.createHttpServer();
+</code></pre>
+<h2 id="configuring-an-http-server">Configuring an HTTP server</h2>
+<p>&#x5982;&#x679C;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x81EA;&#x914D;&#x7F6E;&#x7684;HTTP&#x670D;&#x52A1;&#x5668;&#x4E5F;&#x5F88;&#x7B80;&#x5355;,&#x4F60;&#x53EA;&#x9700;&#x8981;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;,&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>HttpServerOptions</code>&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-java">HttpServerOptions options = <span class="hljs-keyword">new</span> HttpServerOptions().setMaxWebsocketFrameSize(<span class="hljs-number">1000000</span>);
+
+HttpServer server = vertx.createHttpServer(options);
+</code></pre>
+<h2 id="start-the-server-listening">Start the Server Listening</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>listen()</code>&#x65B9;&#x6CD5;,&#x8BA9;&#x670D;&#x52A1;&#x5668;&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;.</p>
+<pre><code class="lang-java">HttpServer server = vertx.createHttpServer();
+server.listen();
+</code></pre>
+<p>&#x6216;&#x8005;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x8981;&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;&#x548C;&#x4E3B;&#x673A;&#x5730;&#x5740;(&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4F1A;&#x5FFD;&#x7565;&#x6389;&#x5728;<code>HttpServerOptions</code>&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x7AEF;&#x53E3;&#x548C;&#x4E3B;&#x673A;&#x5730;&#x5740;)</p>
+<pre><code class="lang-java">HttpServer server = vertx.createHttpServer();
+server.listen(<span class="hljs-number">8080</span>, <span class="hljs-string">&quot;myhost.com&quot;</span>);
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x548C;&#x7AEF;&#x53E3;&#x7684;&#x8BDD;,&#x9ED8;&#x8BA4;&#x76D1;&#x542C;&#x7684;&#x4E3B;&#x673A;&#x5730;&#x5740;&#x662F;<code>0.0.0.0</code>(&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5728;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x4E3B;&#x673A;&#x5730;&#x5740;&#x4E0A;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;),&#x9ED8;&#x8BA4;&#x7684;&#x7AEF;&#x53E3;&#x662F;80</p>
+<p>The actual bind is asynchronous so the server might not actually be listening until some time after the call to listen has returned.</p>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#x8FD9;&#x4E2A;&#x7ED1;&#x5B9A;&#x64CD;&#x4F5C;(<code>listen()</code>)&#x662F;&#x5F02;&#x6B65;&#x8FDB;&#x884C;&#x7740;,&#x8FD9;&#x610F;&#x5473;&#x7740;&#x53EF;&#x80FD;&#x8981;&#x7B49;&#x5230;</p>
+<p>If you want to be notified when the server is actually listening you can provide a handler to the listen call. For example:</p>
+<pre><code class="lang-java">HttpServer server = vertx.createHttpServer();
+server.listen(<span class="hljs-number">8080</span>, <span class="hljs-string">&quot;myhost.com&quot;</span>, res -&gt; {
+  <span class="hljs-keyword">if</span> (res.succeeded()) {
+    System.out.println(<span class="hljs-string">&quot;Server is now listening!&quot;</span>);
+  } <span class="hljs-keyword">else</span> {
+    System.out.println(<span class="hljs-string">&quot;Failed to bind!&quot;</span>);
+  }
+});
+</code></pre>
+<h2 id="getting-notified-of-incoming-requests">Getting notified of incoming requests</h2>
+<p>To be notified when a request arrives you need to set a requestHandler:</p>
+<pre><code class="lang-java">HttpServer server = vertx.createHttpServer();
+server.requestHandler(request -&gt; {
+  <span class="hljs-comment">// Handle the request in here</span>
+});
+</code></pre>
+<h2 id="handling-requests">Handling requests</h2>
+<p>When a request arrives, the request handler is called passing in an instance of HttpServerRequest. This object represents the server side HTTP request.</p>
+<p>The handler is called when the headers of the request have been fully read.</p>
+<p>If the request contains a body, that body will arrive at the server some time after the request handler has been called.</p>
+<p>The server request object allows you to retrieve the uri, path, params and headers, amongst other things.</p>
+<p>Each server request object is associated with one server response object. You use response to get a reference to the HttpServerResponse object.</p>
+<p>Here&#x2019;s a simple example of a server handling a request and replying with &quot;hello world&quot; to it.</p>
+<pre><code class="lang-java">vertx.createHttpServer().requestHandler(request -&gt; {
+  request.response().end(<span class="hljs-string">&quot;Hello world&quot;</span>);
+}).listen(<span class="hljs-number">8080</span>);
+</code></pre>
+<h4 id="request-version">Request version</h4>
+<p>The version of HTTP specified in the request can be retrieved with version</p>
+<h4 id="request-method">Request method</h4>
+<p>Use method to retrieve the HTTP method of the request. (i.e. whether it&#x2019;s GET, POST, PUT, DELETE, HEAD, OPTIONS, etc).</p>
+<h4 id="request-uri">Request URI</h4>
+<p>Use uri to retrieve the URI of the request.</p>
+<p>Note that this is the actual URI as passed in the HTTP request, and it&#x2019;s almost always a relative URI.</p>
+<p>The URI is as defined in Section 5.1.2 of the HTTP specification - Request-URI</p>
+<h4 id="request-path">Request path</h4>
+<p>Use path to return the path part of the URI</p>
+<p>For example, if the request URI was:</p>
+<p>a/b/c/page.html?param1=abc&amp;param2=xyz
+Then the path would be</p>
+<p>/a/b/c/page.html</p>
+<h4 id="request-query">Request query</h4>
+<p>Use query to return the query part of the URI</p>
+<p>For example, if the request URI was:</p>
+<p>a/b/c/page.html?param1=abc&amp;param2=xyz
+Then the query would be</p>
+<p>param1=abc&amp;param2=xyz</p>
+<h4 id="request-headers">Request headers</h4>
+<p>Use headers to return the headers of the HTTP request.</p>
+<p>This returns an instance of MultiMap - which is like a normal Map or Hash but allows multiple values for the same key - this is because HTTP allows multiple header values with the same key.</p>
+<p>It also has case-insensitive keys, that means you can do the following:</p>
+<p>MultiMap headers = request.headers();</p>
+<p>// Get the User-Agent:
+System.out.println(&quot;User agent is &quot; + headers.get(&quot;user-agent&quot;));</p>
+<p>// You can also do this and get the same result:
+System.out.println(&quot;User agent is &quot; + headers.get(&quot;User-Agent&quot;));</p>
+<h4 id="request-parameters">Request parameters</h4>
+<p>Use params to return the parameters of the HTTP request.</p>
+<p>Just like headers this returns an instance of MultiMap as there can be more than one parameter with the same name.</p>
+<p>Request parameters are sent on the request URI, after the path. For example if the URI was:</p>
+<p>/page.html?param1=abc&amp;param2=xyz
+Then the parameters would contain the following:</p>
+<p>param1: &apos;abc&apos;
+param2: &apos;xyz
+Note that these request parameters are retrieved from the URL of the request. If you have form attributes that have been sent as part of the submission of an HTML form submitted in the body of a multi-part/form-data request then they will not appear in the params here.</p>
+<h4 id="remote-address">Remote address</h4>
+<p>The address of the sender of the request can be retrieved with remoteAddress.</p>
+<h4 id="absolute-uri">Absolute URI</h4>
+<p>The URI passed in an HTTP request is usually relative. If you wish to retrieve the absolute URI corresponding to the request, you can get it with absoluteURI</p>
+<h4 id="end-handler">End handler</h4>
+<p>The endHandler of the request is invoked when the entire request, including any body has been fully read.</p>
+<h4 id="reading-data-from-the-request-body">Reading Data from the Request Body</h4>
+<p>Often an HTTP request contains a body that we want to read. As previously mentioned the request handler is called when just the headers of the request have arrived so the request object does not have a body at that point.</p>
+<p>This is because the body may be very large (e.g. a file upload) and we don&#x2019;t generally want to buffer the entire body in memory before handing it to you, as that could cause the server to exhaust available memory.</p>
+<p>To receive the body, you can use the handler on the request, this will get called every time a chunk of the request body arrives. Here&#x2019;s an example:</p>
+<pre><code class="lang-java">request.handler(buffer -&gt; {
+  System.out.println(<span class="hljs-string">&quot;I have received a chunk of the body of length &quot;</span> + buffer.length());
+});
+</code></pre>
+<p>The object passed into the handler is a Buffer, and the handler can be called multiple times as data arrives from the network, depending on the size of the body.</p>
+<p>In some cases (e.g. if the body is small) you will want to aggregate the entire body in memory, so you could do the aggregation yourself as follows:</p>
+<pre><code class="lang-java">Buffer totalBuffer = Buffer.buffer();
+
+request.handler(buffer -&gt; {
+  System.out.println(<span class="hljs-string">&quot;I have received a chunk of the body of length &quot;</span> + buffer.length());
+  totalBuffer.appendBuffer(buffer);
+});
+
+request.endHandler(v -&gt; {
+  System.out.println(<span class="hljs-string">&quot;Full body received, length = &quot;</span> + totalBuffer.length());
+});
+</code></pre>
+<p>This is such a common case, that Vert.x provides a bodyHandler to do this for you. The body handler is called once when all the body has been received:</p>
+<pre><code class="lang-java">request.bodyHandler(totalBuffer -&gt; {
+  System.out.println(<span class="hljs-string">&quot;Full body received, length = &quot;</span> + totalBuffer.length());
+});
+</code></pre>
+<h4 id="pumping-requests">Pumping requests</h4>
+<p>The request object is a ReadStream so you can pump the request body to any WriteStream instance.</p>
+<p>See the chapter on streams and pumps for a detailed explanation.</p>
+<h4 id="handling-html-forms">Handling HTML forms</h4>
+<p>HTML forms can be submitted with either a content type of application/x-www-form-urlencoded or multipart/form-data.</p>
+<p>For url encoded forms, the form attributes are encoded in the url, just like normal query parameters.</p>
+<p>For multi-part forms they are encoded in the request body, and as such are not available until the entire body has been read from the wire.</p>
+<p>Multi-part forms can also contain file uploads.</p>
+<p>If you want to retrieve the attributes of a multi-part form you should tell Vert.x that you expect to receive such a form before any of the body is read by calling setExpectMultipart with true, and then you should retrieve the actual attributes using formAttributes once the entire body has been read:</p>
+<pre><code class="lang-java">server.requestHandler(request -&gt; {
+  request.setExpectMultipart(<span class="hljs-keyword">true</span>);
+  request.endHandler(v -&gt; {
+    <span class="hljs-comment">// The body has now been fully read, so retrieve the form attributes</span>
+    MultiMap formAttributes = request.formAttributes();
+  });
+});
+</code></pre>
+<h4 id="handling-form-file-uploads">Handling form file uploads</h4>
+<p>Vert.x can also handle file uploads which are encoded in a multi-part request body.</p>
+<p>To receive file uploads you tell Vert.x to expect a multi-part form and set an uploadHandler on the request.</p>
+<p>This handler will be called once for every upload that arrives on the server.</p>
+<p>The object passed into the handler is a HttpServerFileUpload instance.</p>
+<pre><code class="lang-java">server.requestHandler(request -&gt; {
+  request.setExpectMultipart(<span class="hljs-keyword">true</span>);
+  request.uploadHandler(upload -&gt; {
+    System.out.println(<span class="hljs-string">&quot;Got a file upload &quot;</span> +  upload.name());
+  });
+});
+</code></pre>
+<p>File uploads can be large we don&#x2019;t provide the entire upload in a single buffer as that might result in memory exhaustion, instead, the upload data is received in chunks:</p>
+<pre><code class="lang-java">request.uploadHandler(upload -&gt; {
+  upload.handler(chunk -&gt; {
+    System.out.println(<span class="hljs-string">&quot;Received a chunk of the upload of length &quot;</span> + chunk.length());
+  });
+});
+</code></pre>
+<p>The upload object is a ReadStream so you can pump the request body to any WriteStream instance. See the chapter on streams and pumps for a detailed explanation.</p>
+<p>If you just want to upload the file to disk somewhere you can use streamToFileSystem:</p>
+<pre><code class="lang-java">request.uploadHandler(upload -&gt; {
+  upload.streamToFileSystem(<span class="hljs-string">&quot;myuploads_directory/&quot;</span> + upload.filename());
+});
+```java
+
+WARNING
+Make sure you check the filename in a production system to avoid malicious clients uploading files to arbitrary places on your filesystem. See security notes <span class="hljs-keyword">for</span> more information.
+
+## Sending back responses
+The server response object is an instance of HttpServerResponse and is obtained from the request with response.
+
+You use the response object to write a response back to the HTTP client.
+
+#### Setting status code and message
+
+The <span class="hljs-keyword">default</span> HTTP status code <span class="hljs-keyword">for</span> a response is <span class="hljs-number">200</span>, representing OK.
+
+Use setStatusCode to set a different code.
+
+You can also specify a custom status message with setStatusMessage.
+
+If you don&#x2019;t specify a status message, the <span class="hljs-keyword">default</span> one corresponding to the status code will be used.
+
+#### Writing HTTP responses
+
+To write data to an HTTP response, you use one the write operations.
+
+These can be invoked multiple times before the response is ended. They can be invoked in a few ways:
+
+With a single buffer:
+```java
+HttpServerResponse response = request.response();
+response.write(buffer);
+</code></pre>
+<p>With a string. In this case the string will encoded using UTF-8 and the result written to the wire.</p>
+<p>HttpServerResponse response = request.response();
+response.write(&quot;hello world!&quot;);
+With a string and an encoding. In this case the string will encoded using the specified encoding and the result written to the wire.</p>
+<pre><code class="lang-java">HttpServerResponse response = request.response();
+response.write(<span class="hljs-string">&quot;hello world!&quot;</span>, <span class="hljs-string">&quot;UTF-16&quot;</span>);
+</code></pre>
+<p>Writing to a response is asynchronous and always returns immediately after the write has been queued.</p>
+<p>If you are just writing a single string or buffer to the HTTP response you can write it and end the response in a single call to the end</p>
+<p>The first call to write results in the response header being being written to the response. Consequently, if you are not using HTTP chunking then you must set the Content-Length header before writing to the response, since it will be too late otherwise. If you are using HTTP chunking you do not have to worry.</p>
+<h4 id="ending-http-responses">Ending HTTP responses</h4>
+<p>Once you have finished with the HTTP response you should end it.</p>
+<p>This can be done in several ways:</p>
+<p>With no arguments, the response is simply ended.</p>
+<pre><code class="lang-java">HttpServerResponse response = request.response();
+response.write(<span class="hljs-string">&quot;hello world!&quot;</span>);
+response.end();
+</code></pre>
+<p>It can also be called with a string or buffer in the same way write is called. In this case it&#x2019;s just the same as calling write with a string or buffer followed by calling end with no arguments. For example:</p>
+<pre><code class="lang-java">HttpServerResponse response = request.response();
+response.end(<span class="hljs-string">&quot;hello world!&quot;</span>);
+```java
+
+#### Closing the underlying connection
+
+You can close the underlying TCP connection with close.
+
+Non keep-alive connections will be automatically closed by Vert.x when the response is ended.
+
+Keep-alive connections are not automatically closed by Vert.x by <span class="hljs-keyword">default</span>. If you want keep-alive connections to be closed after an idle time, then you configure setIdleTimeout.
+
+#### Setting response headers
+
+HTTP response headers can be added to the response by adding them directly to the headers:
+```java
+HttpServerResponse response = request.response();
+MultiMap headers = response.headers();
+headers.set(<span class="hljs-string">&quot;content-type&quot;</span>, <span class="hljs-string">&quot;text/html&quot;</span>);
+headers.set(<span class="hljs-string">&quot;other-header&quot;</span>, <span class="hljs-string">&quot;wibble&quot;</span>);
+</code></pre>
+<p>Or you can use putHeader</p>
+<pre><code class="lang-java">HttpServerResponse response = request.response();
+response.putHeader(<span class="hljs-string">&quot;content-type&quot;</span>, <span class="hljs-string">&quot;text/html&quot;</span>).putHeader(<span class="hljs-string">&quot;other-header&quot;</span>, <span class="hljs-string">&quot;wibble&quot;</span>);
+</code></pre>
+<p>Headers must all be added before any parts of the response body are written.</p>
+<h4 id="chunked-http-responses-and-trailers">Chunked HTTP responses and trailers</h4>
+<p>Vert.x supports HTTP Chunked Transfer Encoding.</p>
+<p>This allows the HTTP response body to be written in chunks, and is normally used when a large response body is being streamed to a client and the total size is not known in advance.</p>
+<p>You put the HTTP response into chunked mode as follows:</p>
+<pre><code class="lang-java">HttpServerResponse response = request.response();
+response.setChunked(<span class="hljs-keyword">true</span>);
+</code></pre>
+<p>Default is non-chunked. When in chunked mode, each call to one of the write methods will result in a new HTTP chunk being written out.</p>
+<p>When in chunked mode you can also write HTTP response trailers to the response. These are actually written in the final chunk of the response.</p>
+<p>To add trailers to the response, add them directly to the trailers.</p>
+<pre><code class="lang-java">HttpServerResponse response = request.response();
+response.setChunked(<span class="hljs-keyword">true</span>);
+MultiMap trailers = response.trailers();
+trailers.set(<span class="hljs-string">&quot;X-wibble&quot;</span>, <span class="hljs-string">&quot;woobble&quot;</span>).set(<span class="hljs-string">&quot;X-quux&quot;</span>, <span class="hljs-string">&quot;flooble&quot;</span>);
+</code></pre>
+<p>Or use putTrailer.</p>
+<pre><code class="lang-java">HttpServerResponse response = request.response();
+response.setChunked(<span class="hljs-keyword">true</span>);
+response.putTrailer(<span class="hljs-string">&quot;X-wibble&quot;</span>, <span class="hljs-string">&quot;woobble&quot;</span>).putTrailer(<span class="hljs-string">&quot;X-quux&quot;</span>, <span class="hljs-string">&quot;flooble&quot;</span>);
+</code></pre>
+<h4 id="serving-files-directly-from-disk">Serving files directly from disk</h4>
+<p>If you were writing a web server, one way to serve a file from disk would be to open it as an AsyncFile and pump it to the HTTP response.</p>
+<p>Or you could load it it one go using readFile and write it straight to the response.</p>
+<p>Alternatively, Vert.x provides a method which allows you to serve a file from disk to an HTTP response in one operation. Where supported by the underlying operating system this may result in the OS directly transferring bytes from the file to the socket without being copied through user-space at all.</p>
+<p>This is done by using sendFile, and is usually more efficient for large files, but may be slower for small files.</p>
+<p>Here&#x2019;s a very simple web server that serves files from the file system using sendFile:</p>
+<pre><code class="lang-java">vertx.createHttpServer().requestHandler(request -&gt; {
+  String file = <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-keyword">if</span> (request.path().equals(<span class="hljs-string">&quot;/&quot;</span>)) {
+    file = <span class="hljs-string">&quot;index.html&quot;</span>;
+  } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> <span class="hljs-params">(!request.path()</span>.<span class="hljs-title">contains</span><span class="hljs-params">(<span class="hljs-string">&quot;..&quot;</span>)</span>) </span>{
+    file = request.path();
+  }
+  request.response().sendFile(<span class="hljs-string">&quot;web/&quot;</span> + file);
+}).listen(<span class="hljs-number">8080</span>);
+</code></pre>
+<p>Sending a file is asynchronous and may not complete until some time after the call has returned. If you want to be notified when the file has been writen you can use sendFile</p>
+<blockquote>
+<p>NOTE
+If you use sendFile while using HTTPS it will copy through user-space, since if the kernel is copying data directly from disk to socket it doesn&#x2019;t give us an opportunity to apply any encryption.</p>
+<p>WARNING
+If you&#x2019;re going to write web servers directly using Vert.x be careful that users cannot exploit the path to access files outside the directory from which you want to serve them. It may be safer instead to use Vert.x Apex.</p>
+</blockquote>
+<h4 id="pumping-responses">Pumping responses</h4>
+<p>The server response is a WriteStream instance so you can pump to it from any ReadStream, e.g. AsyncFile, NetSocket, WebSocket or HttpServerRequest.</p>
+<p>Here&#x2019;s an example which echoes the request body back in the response for any PUT methods. It uses a pump for the body, so it will work even if the HTTP request body is much larger than can fit in memory at any one time:</p>
+<pre><code class="lang-java">vertx.createHttpServer().requestHandler(request -&gt; {
+  HttpServerResponse response = request.response();
+  <span class="hljs-keyword">if</span> (request.method() == HttpMethod.PUT) {
+    response.setChunked(<span class="hljs-keyword">true</span>);
+    Pump.pump(request, response).start();
+    request.endHandler(v -&gt; response.end());
+  } <span class="hljs-keyword">else</span> {
+    response.setStatusCode(<span class="hljs-number">400</span>).end();
+  }
+}).listen(<span class="hljs-number">8080</span>);
+</code></pre>
+<h2 id="http-compression">HTTP Compression</h2>
+<p>Vert.x comes with support for HTTP Compression out of the box.</p>
+<p>This means you are able to automatically compress the body of the responses before they are sent back to the client.</p>
+<p>If the client does not support HTTP compression the responses are sent back without compressing the body.</p>
+<p>This allows to handle Client that support HTTP Compression and those that not support it at the same time.</p>
+<p>To enable compression use can configure it with setCompressionSupported.</p>
+<p>By default compression is not enabled.</p>
+<p>When HTTP compression is enabled the server will check if the client incldes an Accept-Encoding header which includes the supported compressions. Commonly used are deflate and gzip. Both are supported by Vert.x.</p>
+<p>If such a header is found the server will automatically compress the body of the response with one of the supported compressions and send it back to the client.</p>
+<p>Be aware that compression may be able to reduce network traffic but is more CPU-intensive.</p>
 
                     
                     </section>
@@ -1282,14 +1571,16 @@
         </div>
 
         
+        <a href="../Core/writing_http_servers_and_clients.html" class="navigation navigation-prev " aria-label="Previous page: Writing HTTP servers and clients"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./Core/core.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Core"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="../Core/http_client.html" class="navigation navigation-next " aria-label="Next page: HTTP client"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
 <script>
 require(["gitbook"], function(gitbook) {
