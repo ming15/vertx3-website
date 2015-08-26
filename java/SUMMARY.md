@@ -31,8 +31,6 @@
     * [Clustering](Core/clustering.md)
     * [Security notes](Core/security_notes.md)
 * [Web](Web/web.md)
-    * [Request body handling](Web/Request body handling.md)
-    * [Response time handler](Web/Response time handler.md)
     * [Re-cap on Vert.x core HTTP servers](Web/Re-cap on Vert.x core HTTP servers.md)
     * [Basic Vert.x-Web concepts](Web/Basic Vert.x-Web concepts.md)
     * [Handling requests and calling the next handler](Web/Handling requests and calling the next handler.md)

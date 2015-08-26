@@ -1,4 +1,4 @@
-Request body handling
+## Request body handling
 The BodyHandler allows you to retrieve request bodies, limit body sizes and handle file uploads.
 
 You should make sure a body handler is on a matching route for any requests that require this functionality.
