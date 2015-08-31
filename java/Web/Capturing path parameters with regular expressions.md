@@ -1,6 +1,8 @@
-Capturing path parameters with regular expressions
-You can also capture path parameters when using regular expressions, here’s an example:
+# Capturing path parameters with regular expressions
 
+当使用正则表达式的时候,你还可以捕获路径参数：
+
+```java
 Route route = router.routeWithRegex(".*foo");
 
 // This regular expression matches paths that start with something like:
@@ -13,7 +15,9 @@ route.pathRegex("\\/([^\\/]+)\\/([^\\/]+)").handler(routingContext -> {
 
   // Do something with them...
 });
-In the above example, if a request is made to path: /tools/drill123/ then the route will match and productType will receive the value tools and productID will receive the value drill123.
+```
+在上面的例子中,如果请求路径是`/tools/drill123/`, 那么我们设置的`route`会被匹配到, 然后`productType`会接收到参数值`tools`, `productID`会接收到参数值`drill123`.
+
 
 Captures are denoted in regular expressions with capture groups (i.e. surrounding the capture with round brackets)
 

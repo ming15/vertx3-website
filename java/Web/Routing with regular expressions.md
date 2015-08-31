@@ -1,6 +1,7 @@
-Routing with regular expressions
-Regular expressions can also be used to match URI paths in routes.
+# Routing with regular expressions
 
+正则还可以被使用在`URI`路径的匹配上：
+```java
 Route route = router.route().pathRegex(".*foo");
 
 route.handler(routingContext -> {
@@ -15,8 +16,9 @@ route.handler(routingContext -> {
   // But not:
   // /bar/wibble
 });
-Alternatively the regex can be specified when creating the route:
-
+```
+还有一种做法是,正则可以在创建`route`时进行指定.
+```java
 Route route = router.routeWithRegex(".*foo");
 
 route.handler(routingContext -> {
@@ -24,3 +26,4 @@ route.handler(routingContext -> {
   // This handler will be called same as previous example
 
 });
+```

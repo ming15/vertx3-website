@@ -1,12 +1,11 @@
-Using blocking handlers
-Sometimes, you might have to do something in a handler that might block the event loop for some time, e.g. call a legacy blocking API or do some intensive calculation.
+# Using blocking handlers
 
-You can’t do that in a normal handler, so we provide the ability to set blocking handlers on a route.
+在某些环境下,你也许想要在handler执行时,将`event loop`阻塞住, 例如调用一个阻塞API或者执行一些密集型计算. 这种情况下,你不能在普通`handler`中进行操作,我们为`route`提供了一个阻塞的`handler`.
 
-A blocking handler looks just like a normal handler but it’s called by Vert.x using a thread from the worker pool not using an event loop.
+阻塞式和非阻塞式`handler`非常像,只不过阻塞式是由`Vert.x`从`worker pool`中借出一个线程进行任务执行,而非是从`event loop`中.
 
-You set a blocking handler on a route with blockingHandler. Here’s an example:
-
+下例进行了说明：
+```java
 router.route().blockingHandler(routingContext -> {
 
   // Do something that might take some time synchronously
@@ -16,5 +15,6 @@ router.route().blockingHandler(routingContext -> {
   routingContext.next();
 
 });
-By default, any blocking handlers executed on the same context (e.g. the same verticle instance) are ordered - this means the next one won’t be executed until the previous one has completed. If you don’t care about orderering and don’t mind your blocking handlers executing in parallel you can set the blocking handler specifying ordered as false using blockingHandler.
+```
+在默认情况下, Vert.x中任何的阻塞`handler`都是在相同的上下文中(例如`verticle`实例中)顺序执行的,这意味着当前一个handler未完成之前,下一个handler是不会执行的. 如果你不关心任务的执行顺序,而且不介意阻塞`handler`并行执行,你可以在调用`blockingHandler`方法时传递一个`false`的参数,让其不按照任务的指定顺序进行执行.
 

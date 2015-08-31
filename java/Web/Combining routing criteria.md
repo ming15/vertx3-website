@@ -1,6 +1,8 @@
-Combining routing criteria
-You can combine all the above routing criteria in many different ways, for example:
+# Combining routing criteria
 
+你可以将很多`route`规则组合到一起, 例如：
+
+```java
 Route route = router.route(HttpMethod.PUT, "myapi/orders")
                     .consumes("application/json")
                     .produces("application/json");
@@ -12,3 +14,4 @@ route.handler(routingContext -> {
   // and an accept header matching "application/json"
 
 });
+```

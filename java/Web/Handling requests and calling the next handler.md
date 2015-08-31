@@ -1,10 +1,12 @@
-Handling requests and calling the next handler
-When Vert.x-Web decides to route a request to a matching route, it calls the handler of the route passing in an instance of RoutingContext.
+# Handling requests and calling the next handler
 
-If you don’t end the response in your handler, you should call next so another matching route can handle the request (if any).
+当`Vert.x-Web``route`一个`HTTP Request`到一个与之匹配的`route`，它会向该`route`的`handler`传递一个`RoutingContext`实例.
 
-You don’t have to call next before the handler has finished executing. You can do this some time later, if you want:
+如果在当前`handler`里,你不想结束`response`, 那么你应该调用下一个相匹配的`route`继续处理该请求.
 
+你没有必要在当前`handler`执行完之前调用下一个`route`, 你可以稍后再做这件事.
+
+```java
 Route route1 = router.route("/some/path/").handler(routingContext -> {
 
   HttpServerResponse response = routingContext.response();
@@ -36,7 +38,8 @@ Route route3 = router.route("/some/path/").handler(routingContext -> {
   // Now end the response
   routingContext.response().end();
 });
-In the above example route1 is written to the response, then 5 seconds later route2 is written to the response, then 5 seconds later route3 is written to the response and the response is ended.
+```
 
-Note, all this happens without any thread blocking.
+在上面的例子中, `route1`被写到`response`的5秒钟之后,`route2`被写到`response`,在过了5秒钟之后,`route3`被写到`response`,然后结束掉`response`.
 
+注意这一切的发生都是非阻塞的,

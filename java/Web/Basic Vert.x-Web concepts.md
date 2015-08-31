@@ -1,14 +1,14 @@
-Basic Vert.x-Web concepts
+# Basic Vert.x-Web concepts
 Here’s the 10000 foot view:
 
-A Router is one of the core concepts of Vert.x-Web. It’s an object which maintains zero or more Routes .
+`Router`是`Vert.x-Web`最核心的概念. `Router`是一个持有零到多个`Routes`的对象
 
-A router takes an HTTP request and finds the first matching route for that request, and passes the request to that route.
+`Router`会将`HTTP request`发送到第一个匹配该请求的`route`身上.
 
-The route can have a handler associated with it, which then receives the request. You then do something with the request, and then, either end it or pass it to the next matching handler.
+`route`持有一个与`HTTP request`相匹配的`handler`, 然后该`handler`接受该请求. 然后执行具体任务, 当执行完任务之后你可以选择结束该请求或者将它传递给下一个匹配的`handler`.
 
-Here’s a simple router example:
-
+下面是一个简单的示例：
+```java
 HttpServer server = vertx.createHttpServer();
 
 Router router = Router.router(vertx);
@@ -24,17 +24,14 @@ router.route().handler(routingContext -> {
 });
 
 server.requestHandler(router::accept).listen(8080);
-It basically does the same thing as the Vert.x Core HTTP server hello world example from the previous section, but this time using Vert.x-Web.
+```
 
-We create an HTTP server as before, then we create a router. Once we’ve done that we create a simple route with no matching criteria so it will match all requests that arrive on the server.
+我们创建了一个`HTTP Server`服务器, 接着创建了一个`router`. 我们没有对这个`route`指定匹配规则,因此它会匹配所有的`HTTP request`.
 
-We then specify a handler for that route. That handler will be called for all requests that arrive on the server.
+然后我们在该`route`上设置了一个`handler`, 这个`handler`会处理该服务器上所有的`HTTP request`.
 
-The object that gets passed into the handler is a RoutingContext - this contains the standard Vert.x HttpServerRequest and HttpServerResponse but also various other useful stuff that makes working with Vert.x-Web simpler.
+传递给`handler`的是一个`RoutingContext`对象, 该对象包含一个一个标准的`Vert.x HttpServerRequest`和`Vert.x HttpServerResponse`,但是还包含了很多其他的`Vert.x-Web`里的特性.
 
-For every request that is routed there is a unique routing context instance, and the same instance is passed to all handlers for that request.
+对于每一个`HTTP request`都会生成一个唯一的`RoutingContext`实例, 但是给实例会传递给所有匹配该请求的`handler`.
 
-Once we’ve set up the handler, we set the request handler of the HTTP server to pass all incoming requests to accept.
-
-So, that’s the basics. Now we’ll look at things in more detail:
 

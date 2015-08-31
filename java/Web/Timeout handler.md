@@ -1,10 +1,12 @@
-Timeout handler
-Vert.x-Web includes a timeout handler that you can use to timeout requests if they take too long to process.
+# Timeout handler
 
-This is configured using an instance of TimeoutHandler.
+`Vert.x-Web`包含一个超时`handler`,你可以使用它应付某些操作执行时间太长的请求.
 
-If a request times out before the response is written a 408 response will be returned to the client.
+我们通过一个`TimeoutHandler`实例来配置它.
 
-Here’s an example of using a timeout handler which will timeout all requests to paths starting with /foo after 5 seconds:
+如果一个请求在写回之前超时了，那么4.8响应将会写回个给客户端.
 
+下面的例子使用了一个超时`handler`:
+```java
 router.route("/foo/").handler(TimeoutHandler.create(5000));
+```

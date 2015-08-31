@@ -1,5 +1,6 @@
-Default 404 Handling
-If no routes match for any particular request, Vert.x-Web will signal a 404 error.
+# Default 404 Handling
 
-This can then be handled by your own error handler, or perhaps the augmented error handler that we supply to use, or if no error handler is provided Vert.x-Web will send back a basic 404 (Not Found) response.
+如果没有`route`匹配到客户端的请求,那么`Vert.x-Web`会发送一个404的信号错误.
+
+你可以自行手动设置`error handler`, 或者选择我们提供的`error handler`, 如果没有设置`error handler`，`Vert.x-Web`会返回一个基本的404回应
 

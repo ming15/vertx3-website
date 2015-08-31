@@ -1,5 +1,6 @@
-Request logger
-Vert.x-Web includes a handler LoggerHandler that you can use to log HTTP requests.
+# Request logger
 
-By default requests are logged to the Vert.x logger which can be configured to use JUL logging, log4j or SLF4J.
+`Vert.x-Web`内嵌了`LoggerHandler`,使用它你可以将`HTTP requests`通过日志形式记录下来.
+
+默认情况下,请求是`Vert.x logger`进行记录的,我们可以将其配置成`JUL logging, log4j or SLF4J`
 
