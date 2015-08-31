@@ -1,0 +1,1564 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>Error handler | Vert.x 3.0 文档翻译</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../Web/Request logger.html" />
+    
+    
+    <link rel="prev" href="../Web/Templates.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="2.27" data-basepath=".." data-revision="Mon Aug 31 2015 17:31:07 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="Core/core.html">
+            
+                
+                    <a href="../Core/core.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Core
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="Core/in_the_beginning_there_was_vertx.html">
+            
+                
+                    <a href="../Core/in_the_beginning_there_was_vertx.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        In the beginning there was Vertx
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Core/are_you_fluent.html">
+            
+                
+                    <a href="../Core/are_you_fluent.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Are you fluent?
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Core/dont_call_us,_well_call_you.html">
+            
+                
+                    <a href="../Core/dont_call_us,_well_call_you.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Don’t call us we will call you.
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Core/dont_block_me.html">
+            
+                
+                    <a href="../Core/dont_block_me.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Don’t block me!
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Core/reactor_and_multi-reactor.html">
+            
+                
+                    <a href="../Core/reactor_and_multi-reactor.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Reactor and Multi-Reactor
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Core/the_golden_rule_-_dont_block_the_event_loop.html">
+            
+                
+                    <a href="../Core/the_golden_rule_-_dont_block_the_event_loop.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        The Golden Rule - Don’t Block the Event Loop
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Core/running_blocking_code.html">
+            
+                
+                    <a href="../Core/running_blocking_code.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Running blocking code
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Core/verticles.html">
+            
+                
+                    <a href="../Core/verticles.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        Verticles
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Core/the_event_bus.html">
+            
+                
+                    <a href="../Core/the_event_bus.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        The Event Bus
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Core/json.html">
+            
+                
+                    <a href="../Core/json.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        JSON
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="Core/buffers.html">
+            
+                
+                    <a href="../Core/buffers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        Buffers
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Core/writing_tcp_servers_and_clients.html">
+            
+                
+                    <a href="../Core/writing_tcp_servers_and_clients.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                        Writing TCP servers and clients
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="Core/tcp_server.html">
+            
+                
+                    <a href="../Core/tcp_server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.1.</b>
+                        
+                        TCP Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="Core/tcp_client.html">
+            
+                
+                    <a href="../Core/tcp_client.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.2.</b>
+                        
+                        TCP Client
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="Core/ssl_tls.html">
+            
+                
+                    <a href="../Core/ssl_tls.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.3.</b>
+                        
+                        SSL TLS
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="Core/writing_http_servers_and_clients.html">
+            
+                
+                    <a href="../Core/writing_http_servers_and_clients.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                        Writing HTTP servers and clients
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="Core/http_server.html">
+            
+                
+                    <a href="../Core/http_server.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.1.</b>
+                        
+                        HTTP Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="Core/http_client.html">
+            
+                
+                    <a href="../Core/http_client.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.2.</b>
+                        
+                        HTTP client
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Core/using_shared_data_with_vertx.html">
+            
+                
+                    <a href="../Core/using_shared_data_with_vertx.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                        Using Shared Data with Vert.x
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="Core/using_the_file_system_with_vertx.html">
+            
+                
+                    <a href="../Core/using_the_file_system_with_vertx.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                        Using the file system with Vert.x
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Core/datagram_sockets_udp.html">
+            
+                
+                    <a href="../Core/datagram_sockets_udp.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                        Datagram sockets (UDP)
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="Core/dns_client.html">
+            
+                
+                    <a href="../Core/dns_client.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                        DNS client
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="Core/streams.html">
+            
+                
+                    <a href="../Core/streams.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.18.</b>
+                        
+                        Streams
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="Core/parse_tools.html">
+            
+                
+                    <a href="../Core/parse_tools.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.19.</b>
+                        
+                        Parse tools
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="Core/thread_safety.html">
+            
+                
+                    <a href="../Core/thread_safety.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.20.</b>
+                        
+                        Thread safety
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="Core/metrics_spi.html">
+            
+                
+                    <a href="../Core/metrics_spi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.21.</b>
+                        
+                        Metrics SPI
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="Core/clustering.html">
+            
+                
+                    <a href="../Core/clustering.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.22.</b>
+                        
+                        Clustering
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="Core/security_notes.html">
+            
+                
+                    <a href="../Core/security_notes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.23.</b>
+                        
+                        Security notes
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Web/web.html">
+            
+                
+                    <a href="../Web/web.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Web
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Web/Re-cap on Vert.x core HTTP servers.html">
+            
+                
+                    <a href="../Web/Re-cap on Vert.x core HTTP servers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Re-cap on Vert.x core HTTP servers
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Web/Basic Vert.x-Web concepts.html">
+            
+                
+                    <a href="../Web/Basic Vert.x-Web concepts.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Basic Vert.x-Web concepts
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Web/Handling requests and calling the next handler.html">
+            
+                
+                    <a href="../Web/Handling requests and calling the next handler.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Handling requests and calling the next handler
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Web/Using blocking handlers.html">
+            
+                
+                    <a href="../Web/Using blocking handlers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Using blocking handlers
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Web/Routing by exact path.html">
+            
+                
+                    <a href="../Web/Routing by exact path.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Routing by exact path
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Web/Routing by paths that begin with something.html">
+            
+                
+                    <a href="../Web/Routing by paths that begin with something.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Routing by paths that begin with something
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Web/Capturing path parameters.html">
+            
+                
+                    <a href="../Web/Capturing path parameters.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Capturing path parameters
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Web/Routing with regular expressions.html">
+            
+                
+                    <a href="../Web/Routing with regular expressions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Routing with regular expressions
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Web/Capturing path parameters with regular expressions.html">
+            
+                
+                    <a href="../Web/Capturing path parameters with regular expressions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Capturing path parameters with regular expressions
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="Web/Routing by HTTP method.html">
+            
+                
+                    <a href="../Web/Routing by HTTP method.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        Routing by HTTP method
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="Web/Route order.html">
+            
+                
+                    <a href="../Web/Route order.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.11.</b>
+                        
+                        Route order
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="Web/Routing based on MIME type of request.html">
+            
+                
+                    <a href="../Web/Routing based on MIME type of request.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.12.</b>
+                        
+                        Routing based on MIME type of request
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="Web/Routing based on MIME types acceptable by the client.html">
+            
+                
+                    <a href="../Web/Routing based on MIME types acceptable by the client.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.13.</b>
+                        
+                        Routing based on MIME types acceptable by the client
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="Web/Combining routing criteria.html">
+            
+                
+                    <a href="../Web/Combining routing criteria.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.14.</b>
+                        
+                        Combining routing criteria
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="Web/Enabling and disabling routes.html">
+            
+                
+                    <a href="../Web/Enabling and disabling routes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.15.</b>
+                        
+                        Enabling and disabling routes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="Web/Context data.html">
+            
+                
+                    <a href="../Web/Context data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.16.</b>
+                        
+                        Context data
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="Web/Sub-routers.html">
+            
+                
+                    <a href="../Web/Sub-routers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.17.</b>
+                        
+                        Sub-routers
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="Web/Default 404 Handling.html">
+            
+                
+                    <a href="../Web/Default 404 Handling.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.18.</b>
+                        
+                        Default 404 Handling
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="Web/Error handling.html">
+            
+                
+                    <a href="../Web/Error handling.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.19.</b>
+                        
+                        Error handling
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="Web/Request body handling.html">
+            
+                
+                    <a href="../Web/Request body handling.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.20.</b>
+                        
+                        Request body handling
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="Web/Handling cookies.html">
+            
+                
+                    <a href="../Web/Handling cookies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.21.</b>
+                        
+                        Handling cookies
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="Web/Handling sessions.html">
+            
+                
+                    <a href="../Web/Handling sessions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.22.</b>
+                        
+                        Handling sessions
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="Web/Authentication - authorisation.html">
+            
+                
+                    <a href="../Web/Authentication - authorisation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.23.</b>
+                        
+                        Authentication - authorisation
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="Web/Serving static resources.html">
+            
+                
+                    <a href="../Web/Serving static resources.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.24.</b>
+                        
+                        Serving static resources
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="Web/CORS handling.html">
+            
+                
+                    <a href="../Web/CORS handling.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.25.</b>
+                        
+                        CORS handling
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="Web/Templates.html">
+            
+                
+                    <a href="../Web/Templates.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.26.</b>
+                        
+                        Templates
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.27" data-path="Web/Error handler.html">
+            
+                
+                    <a href="../Web/Error handler.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.27.</b>
+                        
+                        Error handler
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.28" data-path="Web/Request logger.html">
+            
+                
+                    <a href="../Web/Request logger.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.28.</b>
+                        
+                        Request logger
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.29" data-path="Web/Serving favicons.html">
+            
+                
+                    <a href="../Web/Serving favicons.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.29.</b>
+                        
+                        Serving favicons
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.30" data-path="Web/Timeout handler.html">
+            
+                
+                    <a href="../Web/Timeout handler.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.30.</b>
+                        
+                        Timeout handler
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.31" data-path="Web/Response time handler.html">
+            
+                
+                    <a href="../Web/Response time handler.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.31.</b>
+                        
+                        Response time handler
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.32" data-path="Web/SockJS.html">
+            
+                
+                    <a href="../Web/SockJS.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.32.</b>
+                        
+                        SockJS
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.33" data-path="Web/SockJS event bus bridge.html">
+            
+                
+                    <a href="../Web/SockJS event bus bridge.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.33.</b>
+                        
+                        SockJS event bus bridge
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Metrics and monitoring/metrics_and_monitoring.html">
+            
+                
+                    <a href="../Metrics and monitoring/metrics_and_monitoring.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Metrics and monitoring
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Metrics and monitoring/features.html">
+            
+                
+                    <a href="../Metrics and monitoring/features.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Features
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Metrics and monitoring/getting_started.html">
+            
+                
+                    <a href="../Metrics and monitoring/getting_started.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Getting started
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Metrics and monitoring/metrics_service.html">
+            
+                
+                    <a href="../Metrics and monitoring/metrics_service.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Metrics service
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Metrics and monitoring/naming.html">
+            
+                
+                    <a href="../Metrics and monitoring/naming.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Naming
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="Metrics and monitoring/retrieving_metrics.html">
+            
+                
+                    <a href="../Metrics and monitoring/retrieving_metrics.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Retrieving metrics
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="Metrics and monitoring/data.html">
+            
+                
+                    <a href="../Metrics and monitoring/data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Data
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Metrics and monitoring/the_metrics.html">
+            
+                
+                    <a href="../Metrics and monitoring/the_metrics.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        The metrics
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="Metrics and monitoring/jmx.html">
+            
+                
+                    <a href="../Metrics and monitoring/jmx.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        JMX
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="Metrics and monitoring/enabling_remote_jmx.html">
+            
+                
+                    <a href="../Metrics and monitoring/enabling_remote_jmx.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Enabling remote JMX
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="Metrics and monitoring/accessing_dropwizard_registry.html">
+            
+                
+                    <a href="../Metrics and monitoring/accessing_dropwizard_registry.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        Accessing Dropwizard Registry
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="Testing/testing.html">
+            
+            <span><b>4.</b> Testing</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="Testing/writing_a_test_suite.html">
+            
+            <span><b>4.1.</b> Writing a test suite</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Testing/asserting.html">
+            
+            <span><b>4.2.</b> Asserting</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Testing/asynchronous_testing.html">
+            
+            <span><b>4.3.</b> Asynchronous testing</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Testing/sharing_objects.html">
+            
+            <span><b>4.4.</b> Sharing objects</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Testing/running.html">
+            
+            <span><b>4.5.</b> Running</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="Testing/reporting.html">
+            
+            <span><b>4.6.</b> Reporting</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="Testing/junit_integration.html">
+            
+            <span><b>4.7.</b> Junit integration</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="Testing/java_language_integration.html">
+            
+            <span><b>4.8.</b> Java language integration</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="java/data_access.html">
+            
+            <span><b>5.</b> Data access</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="Data access/jdbc_client.html">
+            
+                
+                    <a href="../Data access/jdbc_client.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        JDBC client
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="Data access/vertx_mysql_-_postgresql_client.html">
+            
+                
+                    <a href="../Data access/vertx_mysql_-_postgresql_client.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Vert.x MySQL - PostgreSQL client
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="Data access/common_sql_interface.html">
+            
+                
+                    <a href="../Data access/common_sql_interface.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Common SQL interface
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="Authentication and Authorisation/authentication_and_authorisation.html">
+            
+            <span><b>6.</b> Authentication and Authorisation</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="Reactive/index.html">
+            
+            <span><b>7.</b> Reactive</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="Reactive/vertx_rx.html">
+            
+            <span><b>7.1.</b> Vert.x Rx</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="Reactive/vertx_api_for_rxjava.html">
+            
+            <span><b>7.1.1.</b> Vert.x API for RxJava</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="Reactive/rxified_api.html">
+            
+            <span><b>7.1.2.</b> Rxified API</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Reactive/reactive_streams.html">
+            
+            <span><b>7.2.</b> Reactive streams</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="Messaging and Integration/messaging_and_integration.html">
+            
+                
+                    <a href="../Messaging and Integration/messaging_and_integration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Messaging and Integration
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="Services/services.html">
+            
+                
+                    <a href="../Services/services.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Services
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="Cluster Managers/cluster_managers.html">
+            
+            <span><b>10.</b> Cluster Managers</span>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Vert.x 3.0 文档翻译</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p>Error handler
+You can render your own errors using a template handler or otherwise but Vert.x-Web also includes an out of the boxy &quot;pretty&quot; error handler that can render error pages for you.</p>
+<p>The handler is ErrorHandler. To use the error handler just set it as a failure handler for any paths that you want covered.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Web/Templates.html" class="navigation navigation-prev " aria-label="Previous page: Templates"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Web/Request logger.html" class="navigation navigation-next " aria-label="Next page: Request logger"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
