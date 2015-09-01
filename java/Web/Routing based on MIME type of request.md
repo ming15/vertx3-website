@@ -1,11 +1,10 @@
 # Routing based on MIME type of request
-You can specify that a route will match against matching request MIME types using consumes.
 
-In this case, the request will contain a content-type header specifying the MIME type of the request body. This will be matched against the value specified in consumes.
+你可以通过`consumes`方法指定`route`需要匹配请求的`MIME`类型.
 
-Basically, consumes is describing which MIME types the handler can consume.
+这下面的例子中, 请求包含了一个`content-type`请求头,该值指定了请求体的`MINE`类型. 这个值会和`consumes`方法里的值进行匹配.
 
-Matching can be done on exact MIME type matches:
+`MINE`类型的匹配可以做到精确匹配.
 ```
 router.route().consumes("text/html").handler(routingContext -> {
 
@@ -14,7 +13,7 @@ router.route().consumes("text/html").handler(routingContext -> {
 
 });
 ```
-Multiple exact matches can also be specified:
+同样我们还可以进行多个`MINE`类型的匹配
 ```
 router.route().consumes("text/html").consumes("text/plain").handler(routingContext -> {
 
@@ -23,7 +22,7 @@ router.route().consumes("text/html").consumes("text/plain").handler(routingConte
 
 });
 ```
-Matching on wildcards for the sub-type is supported:
+我们还可以通过通配符对子类型进行匹配
 ```
 router.route().consumes("text/*").handler(routingContext -> {
 
@@ -32,7 +31,7 @@ router.route().consumes("text/*").handler(routingContext -> {
 
 });
 ```
-And you can also match on the top level type
+我们还可以通过通配符对父类型进行匹配
 ```
 router.route().consumes("*/json").handler(routingContext -> {
 
@@ -41,5 +40,5 @@ router.route().consumes("*/json").handler(routingContext -> {
 
 });
 ```
-If you don’t specify a / in the consumers, it will assume you meant the sub-type.
 
+如果你在`consumers`不指定`/`, 它会假定你指的是子类型.

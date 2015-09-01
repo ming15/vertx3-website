@@ -49,12 +49,11 @@ route3
 
 如果你想要改变`route`的调用顺序,你可以使用`order()`方法,向其指定一个指定值.
 
+`Routes`在`router`中的位置是按照他们添加进去的时间顺序进行排序的, 而且他们的位置是从0开始的.
 
-Routes are assigned an order at creation time corresponding to the order in which they were added to the router, with the first route numbered 0, the second route numbered 1, and so on.
+当然像上文所说的,你还可以调用`order()`方法改变这个排序. 需要注意的是序号可以是负数, 例如你想要某个`route`在序号0的`route`之前执行,你就可以将某个`route`序号指定为-1.
 
-By specifying an order for the route you can override the default ordering. Order can also be negative, e.g. if you want to ensure a route is evaluated before route number 0.
-
-Let’s change the ordering of route2 so it runs before route1:
+下例中我们改变了`route2`的序号,确保他在`route1`之前执行.
 ```java
 Route route1 = router.route("/some/path/").handler(routingContext -> {
 
@@ -91,13 +90,11 @@ Route route3 = router.route("/some/path/").handler(routingContext -> {
 // Change the order of route2 so it runs before route1
 route2.order(-1);
 ```
-then the response will now contain:
+接下来我们就看到了我们所期望的结果
 ```
 route2
 route1
 route3
 ```
-If two matching routes have the same value of order, then they will be called in the order they were added.
 
-You can also specify that a route is handled last, with last
-
+如果俩个`route`有相同的序号,那么他们会按照添加的顺序进行执行. 你还可以通过调用`last()`方法将某个`route`放到最后一个.

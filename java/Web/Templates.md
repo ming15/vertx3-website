@@ -1,4 +1,4 @@
-Templates
+# Templates
 Vert.x-Web includes dynamic page generation capabilities by including out of the box support for several popular template engines. You can also easily add your own.
 
 Template engines are described by TemplateEngine. In order to render a template render is used.

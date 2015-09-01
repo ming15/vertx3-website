@@ -1,5 +1,6 @@
-Error handler
-You can render your own errors using a template handler or otherwise but Vert.x-Web also includes an out of the boxy "pretty" error handler that can render error pages for you.
+# Error handler
 
-The handler is ErrorHandler. To use the error handler just set it as a failure handler for any paths that you want covered.
+你可以自己提供一个`ErrorHandler`用于处理`error`异常,否则的话`Vert.x-Web`会包含一个包装好的`pretty error handler`用于响应错误页面.
+
+如果你自己想要设置一个`ErrorHandler`, 那么你只需要将其设置成`failure handler`就可以了.
 

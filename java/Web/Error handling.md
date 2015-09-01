@@ -1,4 +1,4 @@
-Error handling
+# Error handling
 As well as setting handlers to handle requests you can also set handlers to handle failures in routing.
 
 Failure handlers are used with the exact same route matching criteria that you use with normal handlers.
@@ -8,7 +8,7 @@ For example you can provide a failure handler that will only handle failures on 
 This allows you to set different failure handlers for different parts of your application.
 
 Here’s an example failure handler that will only be called for failure that occur when routing to GET requests to paths that start with /somepath/:
-
+```java
 Route route = router.get("/somepath/*");
 
 route.failureHandler(frc -> {
@@ -18,12 +18,14 @@ route.failureHandler(frc -> {
   // '/somepath/'
 
 });
+```
 Failure routing will occur if a handler throws an exception, or if a handler calls fail specifying an HTTP status code to deliberately signal a failure.
 
 If an exception is caught from a handler this will result in a failure with status code 500 being signalled.
 
 When handling the failure, the failure handler is passed the routing context which also allows the failure or failure code to be retrieved so the failure handler can use that to generate a failure response.
 
+```java
 Route route1 = router.get("/somepath/path1/");
 
 route1.handler(routingContext -> {
@@ -56,3 +58,4 @@ route3.failureHandler(failureRoutingContext -> {
   response.setStatusCode(statusCode).end("Sorry! Not today");
 
 });
+```

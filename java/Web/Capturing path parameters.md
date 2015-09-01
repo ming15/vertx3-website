@@ -1,8 +1,8 @@
-Capturing path parameters
-It’s possible to match paths using placeholders for parameters which are then available in the request params.
+# Capturing path parameters
 
-Here’s an example
+我们可以在请求参数上使用通配符进行匹配路径
 
+```java
 Route route = router.route(HttpMethod.POST, "/catalogue/products/:productype/:productid/");
 
 route.handler(routingContext -> {
@@ -12,7 +12,9 @@ route.handler(routingContext -> {
 
   // Do something with them...
 });
-The placeholders consist of : followed by the parameter name. Parameter names consist of any alphabetic character, numeric character or underscore.
+```
 
-In the above example, if a POST request is made to path: /catalogue/products/tools/drill123/ then the route will match and productType will receive the value tools and productID will receive the value drill123.
+通配符由`:`组成,将其放在参数名后面. 参数名由字母和数字下划线组成.
+
+在上面的例子中,如果一个`POST`请求地址是`/catalogue/products/tools/drill123/`, 那么上面的`route`会被匹配到, `productType`接收到`tools`值, `productID`会接收到`drill123`值.
 
