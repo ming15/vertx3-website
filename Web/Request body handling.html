@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.20" data-basepath=".." data-revision="Mon Aug 31 2015 17:31:07 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.20" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1527,29 +1527,34 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="request-body-handling">Request body handling</h2>
+                        <h1 id="request-body-handling">Request body handling</h1>
 <p>The BodyHandler allows you to retrieve request bodies, limit body sizes and handle file uploads.</p>
 <p>You should make sure a body handler is on a matching route for any requests that require this functionality.</p>
-<p>router.route().handler(BodyHandler.create());
-Getting the request body
-If you know the request body is JSON, then you can use getBodyAsJson, if you know it&#x2019;s a string you can use getBodyAsString, or to retrieve it as a buffer use getBody.</p>
+<pre><code class="lang-java">router.route().handler(BodyHandler.create());
+</code></pre>
+<h3 id="getting-the-request-body">Getting the request body</h3>
+<p>If you know the request body is JSON, then you can use getBodyAsJson, if you know it&#x2019;s a string you can use getBodyAsString, or to retrieve it as a buffer use getBody.</p>
 <p>Limiting body size
 To limit the size of a request body, create the body handler then use setBodyLimit to specifying the maximum body size, in bytes. This is useful to avoid running out of memory with very large bodies.</p>
 <p>If an attempt to send a body greater than the maximum size is made, an HTTP status code of 413 - Request Entity Too Large, will be sent.</p>
 <p>There is no body limit by default.</p>
-<p>Merging form attributes
-By default, the body handler will merge any form attributes into the request parameters. If you don&#x2019;t want this behaviour you can use disable it with setMergeFormAttributes.</p>
-<p>Handling file uploads
-Body handler is also used to handle multi-part file uploads.</p>
+<h3 id="merging-form-attributes">Merging form attributes</h3>
+<p>By default, the body handler will merge any form attributes into the request parameters. If you don&#x2019;t want this behaviour you can use disable it with setMergeFormAttributes.</p>
+<h3 id="handling-file-uploads">Handling file uploads</h3>
+<p>Body handler is also used to handle multi-part file uploads.</p>
 <p>If a body handler is on a matching route for the request, any file uploads will be automatically streamed to the uploads directory, which is file-uploads by default.</p>
 <p>Each file will be given an automatically generated file name, and the file uploads will be available on the routing context with fileUploads.</p>
 <p>Here&#x2019;s an example:</p>
-<p>router.route().handler(BodyHandler.create());</p>
-<p>router.post(&quot;/some/path/uploads&quot;).handler(routingContext -&gt; {</p>
-<p>  Set<FileUpload> uploads = routingContext.fileUploads();
-  // Do something with uploads....</FileUpload></p>
-<p>});
-Each file upload is described by a FileUpload instance, which allows various properties such as the name, file-name and size to be accessed.</p>
+<pre><code class="lang-java">router.route().handler(BodyHandler.create());
+
+router.post(<span class="hljs-string">&quot;/some/path/uploads&quot;</span>).handler(routingContext -&gt; {
+
+  Set&lt;FileUpload&gt; uploads = routingContext.fileUploads();
+  <span class="hljs-comment">// Do something with uploads....</span>
+
+});
+</code></pre>
+<p>Each file upload is described by a FileUpload instance, which allows various properties such as the name, file-name and size to be accessed.</p>
 
                     
                     </section>

@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.19" data-basepath=".." data-revision="Mon Aug 31 2015 17:31:07 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.19" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1527,41 +1527,58 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>Error handling
-As well as setting handlers to handle requests you can also set handlers to handle failures in routing.</p>
+                        <h1 id="error-handling">Error handling</h1>
+<p>As well as setting handlers to handle requests you can also set handlers to handle failures in routing.</p>
 <p>Failure handlers are used with the exact same route matching criteria that you use with normal handlers.</p>
 <p>For example you can provide a failure handler that will only handle failures on certain paths, or for certain HTTP methods.</p>
 <p>This allows you to set different failure handlers for different parts of your application.</p>
 <p>Here&#x2019;s an example failure handler that will only be called for failure that occur when routing to GET requests to paths that start with /somepath/:</p>
-<p>Route route = router.get(&quot;/somepath/*&quot;);</p>
-<p>route.failureHandler(frc -&gt; {</p>
-<p>  // This will be called for failures that occur
-  // when routing requests to paths starting with
-  // &apos;/somepath/&apos;</p>
-<p>});
-Failure routing will occur if a handler throws an exception, or if a handler calls fail specifying an HTTP status code to deliberately signal a failure.</p>
+<pre><code class="lang-java">Route route = router.get(<span class="hljs-string">&quot;/somepath/*&quot;</span>);
+
+route.failureHandler(frc -&gt; {
+
+  <span class="hljs-comment">// This will be called for failures that occur</span>
+  <span class="hljs-comment">// when routing requests to paths starting with</span>
+  <span class="hljs-comment">// &apos;/somepath/&apos;</span>
+
+});
+</code></pre>
+<p>Failure routing will occur if a handler throws an exception, or if a handler calls fail specifying an HTTP status code to deliberately signal a failure.</p>
 <p>If an exception is caught from a handler this will result in a failure with status code 500 being signalled.</p>
 <p>When handling the failure, the failure handler is passed the routing context which also allows the failure or failure code to be retrieved so the failure handler can use that to generate a failure response.</p>
-<p>Route route1 = router.get(&quot;/somepath/path1/&quot;);</p>
-<p>route1.handler(routingContext -&gt; {</p>
-<p>  // Let&apos;s say this throws a RuntimeException
-  throw new RuntimeException(&quot;something happened!&quot;);</p>
-<p>});</p>
-<p>Route route2 = router.get(&quot;/somepath/path2&quot;);</p>
-<p>route2.handler(routingContext -&gt; {</p>
-<p>  // This one deliberately fails the request passing in the status code
-  // E.g. 403 - Forbidden
-  routingContext.fail(403);</p>
-<p>});</p>
-<p>// Define a failure handler
-// This will get called for any failures in the above handlers
-Route route3 = router.get(&quot;/somepath/*&quot;);</p>
-<p>route3.failureHandler(failureRoutingContext -&gt; {</p>
-<p>  int statusCode = failureRoutingContext.statusCode();</p>
-<p>  // Status code will be 500 for the RuntimeException or 403 for the other failure
+<pre><code class="lang-java">Route route1 = router.get(<span class="hljs-string">&quot;/somepath/path1/&quot;</span>);
+
+route1.handler(routingContext -&gt; {
+
+  <span class="hljs-comment">// Let&apos;s say this throws a RuntimeException</span>
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> RuntimeException(<span class="hljs-string">&quot;something happened!&quot;</span>);
+
+});
+
+Route route2 = router.get(<span class="hljs-string">&quot;/somepath/path2&quot;</span>);
+
+route2.handler(routingContext -&gt; {
+
+  <span class="hljs-comment">// This one deliberately fails the request passing in the status code</span>
+  <span class="hljs-comment">// E.g. 403 - Forbidden</span>
+  routingContext.fail(<span class="hljs-number">403</span>);
+
+});
+
+<span class="hljs-comment">// Define a failure handler</span>
+<span class="hljs-comment">// This will get called for any failures in the above handlers</span>
+Route route3 = router.get(<span class="hljs-string">&quot;/somepath/*&quot;</span>);
+
+route3.failureHandler(failureRoutingContext -&gt; {
+
+  <span class="hljs-keyword">int</span> statusCode = failureRoutingContext.statusCode();
+
+  <span class="hljs-comment">// Status code will be 500 for the RuntimeException or 403 for the other failure</span>
   HttpServerResponse response = failureRoutingContext.response();
-  response.setStatusCode(statusCode).end(&quot;Sorry! Not today&quot;);</p>
-<p>});</p>
+  response.setStatusCode(statusCode).end(<span class="hljs-string">&quot;Sorry! Not today&quot;</span>);
+
+});
+</code></pre>
 
                     
                     </section>

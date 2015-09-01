@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.7" data-basepath=".." data-revision="Mon Aug 31 2015 17:31:07 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.7" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1527,17 +1527,20 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>Capturing path parameters
-It&#x2019;s possible to match paths using placeholders for parameters which are then available in the request params.</p>
-<p>Here&#x2019;s an example</p>
-<p>Route route = router.route(HttpMethod.POST, &quot;/catalogue/products/:productype/:productid/&quot;);</p>
-<p>route.handler(routingContext -&gt; {</p>
-<p>  String productType = routingContext.request().getParam(&quot;producttype&quot;);
-  String productID = routingContext.request().getParam(&quot;productid&quot;);</p>
-<p>  // Do something with them...
+                        <h1 id="capturing-path-parameters">Capturing path parameters</h1>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4E0A;&#x4F7F;&#x7528;&#x901A;&#x914D;&#x7B26;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x8DEF;&#x5F84;</p>
+<pre><code class="lang-java">Route route = router.route(HttpMethod.POST, <span class="hljs-string">&quot;/catalogue/products/:productype/:productid/&quot;</span>);
+
+route.handler(routingContext -&gt; {
+
+  String productType = routingContext.request().getParam(<span class="hljs-string">&quot;producttype&quot;</span>);
+  String productID = routingContext.request().getParam(<span class="hljs-string">&quot;productid&quot;</span>);
+
+  <span class="hljs-comment">// Do something with them...</span>
 });
-The placeholders consist of : followed by the parameter name. Parameter names consist of any alphabetic character, numeric character or underscore.</p>
-<p>In the above example, if a POST request is made to path: /catalogue/products/tools/drill123/ then the route will match and productType will receive the value tools and productID will receive the value drill123.</p>
+</code></pre>
+<p>&#x901A;&#x914D;&#x7B26;&#x7531;<code>:</code>&#x7EC4;&#x6210;,&#x5C06;&#x5176;&#x653E;&#x5728;&#x53C2;&#x6570;&#x540D;&#x540E;&#x9762;. &#x53C2;&#x6570;&#x540D;&#x7531;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;.</p>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;,&#x5982;&#x679C;&#x4E00;&#x4E2A;<code>POST</code>&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x662F;<code>/catalogue/products/tools/drill123/</code>, &#x90A3;&#x4E48;&#x4E0A;&#x9762;&#x7684;<code>route</code>&#x4F1A;&#x88AB;&#x5339;&#x914D;&#x5230;, <code>productType</code>&#x63A5;&#x6536;&#x5230;<code>tools</code>&#x503C;, <code>productID</code>&#x4F1A;&#x63A5;&#x6536;&#x5230;<code>drill123</code>&#x503C;.</p>
 
                     
                     </section>

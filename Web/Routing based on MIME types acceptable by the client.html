@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.13" data-basepath=".." data-revision="Mon Aug 31 2015 17:31:07 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.13" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1528,17 +1528,18 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="routing-based-on-mime-types-acceptable-by-the-client">Routing based on MIME types acceptable by the client</h1>
-<p>The HTTP accept header is used to signify which MIME types of the response are acceptable to the client.</p>
-<p>An accept header can have multiple MIME types separated by &#x2018;,&#x2019;.</p>
-<p>MIME types can also have a q value appended to them* which signifies a weighting to apply if more than one response MIME type is available matching the accept header. The q value is a number between 0 and 1.0. If omitted it defaults to 1.0.</p>
-<p>For example, the following accept header signifies the client will accept a MIME type of only text/plain:</p>
+<p><code>HTTP accept header</code>&#x5E38;&#x5E38;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x6536;&#x5230;&#x7684;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x7684;<code>MIME</code>&#x7C7B;&#x578B;.</p>
+<p><code>accept header</code>&#x53EF;&#x4EE5;&#x5E26;&#x6709;&#x591A;&#x4E2A;<code>MIME</code>&#x7C7B;&#x578B;,&#x4ED6;&#x4EEC;&#x4E4B;&#x95F4;&#x901A;&#x8FC7;<code>&apos;,&apos;</code>&#x5206;&#x5272;.</p>
+<p><code>MIME</code>&#x7C7B;&#x578B;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;&#x4E00;&#x4E2A;<code>q</code>&#x503C;, 
+MIME types can also have a q value appended to them* which signifies a weighting to apply if more than one response MIME type is available matching the accept header. The q value is a number between 0 and 1.0. If omitted it defaults to 1.0.</p>
+<p>&#x4F8B;&#x5982;,&#x4E0B;&#x9762;&#x7684;<code>accept header</code>&#x8868;&#x793A;&#x53EA;&#x4F1A;&#x63A5;&#x53D7;<code>text/plain</code>&#x7684;<code>MIME</code>&#x7C7B;&#x578B;.</p>
 <pre><code>Accept: text/plain
-</code></pre><p>With the following the client will accept text/plain or text/html with no preference.</p>
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;<code>accept header</code>&#x4F1A;&#x63A5;&#x53D7;<code>text/plain</code>&#x548C;<code>text/html</code>&#x7684;<code>MIME</code>&#x7C7B;&#x578B;,&#x8FD9;&#x4FE9;&#x8005;&#x76F4;&#x63A5;&#x5E76;&#x6CA1;&#x6709;&#x4F18;&#x5148;&#x7EA7;.</p>
 <pre><code>Accept: text/plain, text/html
-```With the following the client will accept text/plain or text/html but prefers text/html as it has a higher q value (the default value is q=1.0)
-</code></pre><p>Accept: text/plain; q=0.9, text/html
-```If the server can provide both text/plain and text/html it should provide the text/html in this case.</p>
-<p>By using produces you define which MIME type(s) the route produces, e.g. the following handler produces a response with MIME type application/json.</p>
+</code></pre><p>&#x4F46;&#x662F;&#x4E0B;&#x9762;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x4F1A;&#x63A5;&#x53D7;<code>text/plain</code>&#x548C;<code>text/html</code>&#x7684;<code>MIME</code>&#x7C7B;&#x578B;,&#x4F46;&#x662F;<code>text/html</code>&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;<code>text/plain</code>, &#x56E0;&#x4E3A;<code>text/html</code>&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x9AD8;&#x7684;<code>q</code>&#x503C;. (&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;<code>q=1</code>)</p>
+<pre><code>Accept: text/plain; q=0.9, text/html
+</code></pre><p>&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x80FD;&#x591F;&#x540C;&#x65F6;&#x63D0;&#x4F9B;<code>text/plain</code>&#x548C;<code>text/html</code>, &#x90A3;&#x4E48;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;,&#x4ED6;&#x5C31;&#x5E94;&#x8BE5;&#x63D0;&#x4F9B;<code>text/html</code>.</p>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>produces</code>&#x65B9;&#x6CD5;&#x8BBE;&#x7F6E;&#x4E86;<code>route</code>&#x4EA7;&#x751F;&#x7684;<code>MIME</code>&#x7C7B;&#x578B;, &#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;<code>handler</code>&#x8BBE;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;<code>MIME</code>&#x7C7B;&#x578B;&#x4E3A;<code>application/json</code>&#x7684;&#x54CD;&#x5E94;</p>
 <pre><code>router.route().produces(&quot;application/json&quot;).handler(routingContext -&gt; {
 
   HttpServerResponse response = routingContext.response();
@@ -1546,13 +1547,13 @@
   response.write(someJSON).end();
 
 });
-</code></pre><p>In this case the route will match with any request with an accept header that matches application/json.</p>
-<p>Here are some examples of accept headers that will match:</p>
+</code></pre><p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;,<code>route</code>&#x4F1A;&#x5339;&#x914D;&#x5230;&#x6240;&#x6709;&#x7684;<code>accept header</code>&#x4E3A;<code>application/json</code>&#x7684;&#x8BF7;&#x6C42;.</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x8BE5;<code>accept headers</code>&#x7684;&#x5339;&#x914D;&#x503C;:</p>
 <pre><code>Accept: application/json
 Accept: application/*
 Accept: application/json, text/html
 Accept: application/json;q=0.7, text/html;q=0.8, text/plain
-</code></pre><p>You can also mark your route as producing more than one MIME type. If this is the case, then you use getAcceptableContentType to find out the actual MIME type that was accepted.</p>
+</code></pre><p>&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4F60;&#x7684;<code>route</code>produce&#x591A;&#x4E2A;<code>MIME</code>&#x7C7B;&#x578B;. &#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E2D;, &#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>getAcceptableContentType()</code>&#x65B9;&#x6CD5;&#x627E;&#x5230;&#x5B9E;&#x9645;&#x63A5;&#x53D7;&#x5230;&#x7684;<code>MIME</code>&#x7C7B;&#x578B;</p>
 <pre><code>router.route().produces(&quot;application/json&quot;).produces(&quot;text/html&quot;).handler(routingContext -&gt; {
 
   HttpServerResponse response = routingContext.response();
@@ -1563,9 +1564,10 @@ Accept: application/json;q=0.7, text/html;q=0.8, text/plain
   response.putHeader(&quot;content-type&quot;, acceptableContentType);
   response.write(whatever).end();
 });
-</code></pre><p>In the above example, if you sent a request with the following accept header:</p>
-<p>Accept: application/json; q=0.7, text/html
-Then the route would match and acceptableContentType would contain text/html as both are acceptable but that has a higher q value.</p>
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x53D1;&#x9001;&#x4E0B;&#x9762;&#x7684;<code>accept header</code></p>
+<pre><code class="lang-java">Accept: application/json; q=<span class="hljs-number">0.7</span>, text/html
+</code></pre>
+<p>Then the route would match and acceptableContentType would contain text/html as both are acceptable but that has a higher q value.</p>
 
                     
                     </section>
