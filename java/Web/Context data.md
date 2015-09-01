@@ -1,13 +1,9 @@
 # Context data
 
+在一个请求的生命周期之内, 你可以将想要在`handler`之间共享的数据放在`RoutingContext`中进行传递.
 
-You can use the context data in the RoutingContext to maintain any data that you want to share between handlers for the lifetime of the request.
+下面的例子中,使用`put`添加数据, 使用`get`检索数据.
 
-Here’s an example where one handler sets some data in the context data and a subsequent handler retrieves it:
-
-You can use the put to put any object, and get to retrieve any object from the context data.
-
-A request sent to path /some/path/other will match both routes.
 ```java
 router.get("/some/path").handler(routingContext -> {
 
@@ -24,5 +20,4 @@ router.get("/some/path/other").handler(routingContext -> {
 
 });
 ```
-Alternatively you can access the entire context data map with data.
 
