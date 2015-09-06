@@ -1,5 +1,8 @@
 # Sub-routers
 
+有时候你也许会有很多`handler`来处理请求, 在这种情况下将这些`handler`分配到多个`route`中是非常有好处的. 另外如果你想在不同的应用程序中通过不同的`root`路径来复用这些`handler`, 这种做法同样是很有帮助的.
+
+为了能达到这种效果, 你可以
 
 Sometimes if you have a lot of handlers it can make sense to split them up into multiple routers. This is also useful if you want to reuse a set of handlers in a different application, rooted at a different path root.
 

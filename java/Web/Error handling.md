@@ -1,13 +1,14 @@
 # Error handling
-As well as setting handlers to handle requests you can also set handlers to handle failures in routing.
 
-Failure handlers are used with the exact same route matching criteria that you use with normal handlers.
+我们可以设置`handler`来处理请求,同样我们还可以设置`handler`处理`route`中的失败情况.
 
-For example you can provide a failure handler that will only handle failures on certain paths, or for certain HTTP methods.
+`Failure handlers` 通常是和处理普通`handler`的`route`一起工作.
 
-This allows you to set different failure handlers for different parts of your application.
+例如,你可以提供一个`failure handler`只是用来处理某种特定路径下的或者某种特定`HTTP method`的失败.
 
-Here’s an example failure handler that will only be called for failure that occur when routing to GET requests to paths that start with /somepath/:
+这种机制就为你向应用程序的不同部分设置不同的`failure handler`了.
+
+下面的例子演示了我们向`/somepath/`开始的路径和`GET`请求才会被调用的`failure handler`.
 ```java
 Route route = router.get("/somepath/*");
 
@@ -19,11 +20,11 @@ route.failureHandler(frc -> {
 
 });
 ```
-Failure routing will occur if a handler throws an exception, or if a handler calls fail specifying an HTTP status code to deliberately signal a failure.
+如果`handler`中抛出异常`Failure routing`就会发生作用, 或者`handler`调用失败,向客户端发送一个失败的`HTTP`状态码信号.
 
-If an exception is caught from a handler this will result in a failure with status code 500 being signalled.
+如果我们从`handler`中捕获一个异常, 我们将会向客户端返回`500`的状态码.
 
-When handling the failure, the failure handler is passed the routing context which also allows the failure or failure code to be retrieved so the failure handler can use that to generate a failure response.
+在处理失败的时候, `failure handler`会被传递给`routing context`, 我们可以在该`context`中检索出当前的错误, 因此`failure handler`可以用于生成`failure response`。
 
 ```java
 Route route1 = router.get("/somepath/path1/");

@@ -1,5 +1,7 @@
-Handling sessions
-Vert.x-Web provides out of the box support for sessions.
+# Handling sessions
+
+`Vert.x-Web` 同样提供了对于`session`的支持.
+
 
 Sessions last between HTTP requests for the length of a browser session and give you a place where you can add session-scope information, such as a shopping basket.
 
@@ -13,12 +15,12 @@ To enable sessions in your application you must have a SessionHandler on a match
 
 The session handler handles the creation of session cookies and the lookup of the session so you don’t have to do that yourself.
 
-Session stores
+## Session stores
 To create a session handler you need to have a session store instance. The session store is the object that holds the actual sessions for your application.
 
 Vert.x-Web comes with two session store implementations out of the box, and you can also write your own if you prefer.
 
-Local session store
+#### Local session store
 
 With this store, sessions are stored locally in memory and only available in this instance.
 
@@ -42,7 +44,8 @@ SessionStore store2 = LocalSessionStore.create(vertx, "myapp3.sessionmap");
 // Create a local session store specifying the local shared map name to use and
 // setting the reaper interval for expired sessions to 10 seconds
 SessionStore store3 = LocalSessionStore.create(vertx, "myapp3.sessionmap", 10000);
-Clustered session store
+
+#### Clustered session store
 
 With this store, sessions are stored in a distributed map which is accessible across the Vert.x cluster.
 
@@ -66,7 +69,7 @@ Vertx.clusteredVertx(new VertxOptions().setClustered(true), res -> {
   // and want to use different maps for different applications
   SessionStore store2 = ClusteredSessionStore.create(vertx, "myclusteredapp3.sessionmap");
 });
-Creating the session handler
+## Creating the session handler
 Once you’ve created a session store you can create a session handler, and add it to a route. You should make sure your session handler is routed to before your application handlers.
 
 You’ll also need to include a CookieHandler as the session handler uses cookies to lookup the session. The cookie handler should be before the session handler when routing.
@@ -96,7 +99,7 @@ router.route("/somepath/blah/").handler(routingContext -> {
 });
 The session handler will ensure that your session is automatically looked up (or created if no session exists) from the session store and set on the routing context before it gets to your application handlers.
 
-Using the session
+## Using the session
 In your handlers you an access the session instance with session.
 
 You put data into the session with put, you get data from the session with get, and you remove data from the session with remove.
@@ -127,7 +130,7 @@ Sessions are automatically written back to the store after after responses are c
 
 You can manually destroy a session using destroy. This will remove the session from the context and the session store. Note that if there is no session a new one will be automatically created for the next request from the browser that’s routed through the session handler.
 
-Session timeout
+## Session timeout
 Sessions will be automatically timed out if they are not accessed for a time greater than the timeout period. When a session is timed out, it is removed from the store.
 
 Sessions are automatically marked as accessed when a request arrives and the session is looked up and and when the response is complete and the session is stored back in the store.
