@@ -1,8 +1,8 @@
 # Verticles
 
-Vert.x comes with a simple, scalable, actor-like deployment and concurrency model out of the box that you can use to save you writing your own.
+`Vert.x`引入了一个简单的可扩展的类`actor`的部署和并发模型.
 
-###### This model is entirely optional and Vert.x does not force you to create your applications in this way if you don’t want to..
+###### 这个模型是可选的, 如果你不想要采取该模型也可以不实现它,vertx并不强制要求你实现它.
 
 这个模型并不是`actor-model`的严格实现, 但是该模型在并发处理,拓展模式和开发模式上确实和`actor-model`非常像。
 
@@ -92,7 +92,6 @@ public class MyVerticle extends AbstractVerticle {
 
 
 ### Standard verticles
-Standard verticles are assigned an event loop thread when they are created and the start method is called with that event loop. When you call any other methods that takes a handler on a core API from an event loop then Vert.x will guarantee that those handlers, when called, will be executed on the same event loop.
 
 `Standard Verticles`当被创建的时候会被分配到一个`event loop`上, 同时`Standard Verticles`的`start()`会被该`event loop`进行调用. 当你在`event loop`中,通过核心API以及带有`handler`参数的的方式调用其他方法时,`Vert.x`确保那些`handler`回调时是被刚才那个`event loop`进行调用的.
 
@@ -106,9 +105,7 @@ Standard verticles are assigned an event loop thread when they are created and t
 
 `worker verticle`是被设计成专门用来调用阻塞代码的,他们不会阻塞掉任何的`event loop`.
 
-If you don’t want to use a worker verticle to run blocking code, you can also run inline blocking code directly while on an event loop.
-
-如果你不想在`worker verticle`中运行阻塞代码,
+如果你不想在`worker verticle`中运行阻塞代码, 你也可以在`event loop`中执行运行内联的阻塞代码.
 
 如果你想要部署`worker verticle`时, 你可以使用`setWorker()`.
 ```java
