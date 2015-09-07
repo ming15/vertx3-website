@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.19" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.19" data-basepath=".." data-revision="Mon Sep 07 2015 16:02:23 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1528,11 +1528,11 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="error-handling">Error handling</h1>
-<p>As well as setting handlers to handle requests you can also set handlers to handle failures in routing.</p>
-<p>Failure handlers are used with the exact same route matching criteria that you use with normal handlers.</p>
-<p>For example you can provide a failure handler that will only handle failures on certain paths, or for certain HTTP methods.</p>
-<p>This allows you to set different failure handlers for different parts of your application.</p>
-<p>Here&#x2019;s an example failure handler that will only be called for failure that occur when routing to GET requests to paths that start with /somepath/:</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>handler</code>&#x6765;&#x5904;&#x7406;&#x8BF7;&#x6C42;,&#x540C;&#x6837;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>handler</code>&#x5904;&#x7406;<code>route</code>&#x4E2D;&#x7684;&#x5931;&#x8D25;&#x60C5;&#x51B5;.</p>
+<p><code>Failure handlers</code> &#x901A;&#x5E38;&#x662F;&#x548C;&#x5904;&#x7406;&#x666E;&#x901A;<code>handler</code>&#x7684;<code>route</code>&#x4E00;&#x8D77;&#x5DE5;&#x4F5C;.</p>
+<p>&#x4F8B;&#x5982;,&#x4F60;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;<code>failure handler</code>&#x53EA;&#x662F;&#x7528;&#x6765;&#x5904;&#x7406;&#x67D0;&#x79CD;&#x7279;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6216;&#x8005;&#x67D0;&#x79CD;&#x7279;&#x5B9A;<code>HTTP method</code>&#x7684;&#x5931;&#x8D25;.</p>
+<p>&#x8FD9;&#x79CD;&#x673A;&#x5236;&#x5C31;&#x4E3A;&#x4F60;&#x5411;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E0D;&#x540C;&#x90E8;&#x5206;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;<code>failure handler</code>&#x4E86;.</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6F14;&#x793A;&#x4E86;&#x6211;&#x4EEC;&#x5411;<code>/somepath/</code>&#x5F00;&#x59CB;&#x7684;&#x8DEF;&#x5F84;&#x548C;<code>GET</code>&#x8BF7;&#x6C42;&#x624D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x7684;<code>failure handler</code>.</p>
 <pre><code class="lang-java">Route route = router.get(<span class="hljs-string">&quot;/somepath/*&quot;</span>);
 
 route.failureHandler(frc -&gt; {
@@ -1543,9 +1543,9 @@ route.failureHandler(frc -&gt; {
 
 });
 </code></pre>
-<p>Failure routing will occur if a handler throws an exception, or if a handler calls fail specifying an HTTP status code to deliberately signal a failure.</p>
-<p>If an exception is caught from a handler this will result in a failure with status code 500 being signalled.</p>
-<p>When handling the failure, the failure handler is passed the routing context which also allows the failure or failure code to be retrieved so the failure handler can use that to generate a failure response.</p>
+<p>&#x5982;&#x679C;<code>handler</code>&#x4E2D;&#x629B;&#x51FA;&#x5F02;&#x5E38;<code>Failure routing</code>&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x4F5C;&#x7528;, &#x6216;&#x8005;<code>handler</code>&#x8C03;&#x7528;&#x5931;&#x8D25;,&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#x7684;<code>HTTP</code>&#x72B6;&#x6001;&#x7801;&#x4FE1;&#x53F7;.</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4ECE;<code>handler</code>&#x4E2D;&#x6355;&#x83B7;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;, &#x6211;&#x4EEC;&#x5C06;&#x4F1A;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x8FD4;&#x56DE;<code>500</code>&#x7684;&#x72B6;&#x6001;&#x7801;.</p>
+<p>&#x5728;&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x5019;, <code>failure handler</code>&#x4F1A;&#x88AB;&#x4F20;&#x9012;&#x7ED9;<code>routing context</code>, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8BE5;<code>context</code>&#x4E2D;&#x68C0;&#x7D22;&#x51FA;&#x5F53;&#x524D;&#x7684;&#x9519;&#x8BEF;, &#x56E0;&#x6B64;<code>failure handler</code>&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x751F;&#x6210;<code>failure response</code>&#x3002;</p>
 <pre><code class="lang-java">Route route1 = router.get(<span class="hljs-string">&quot;/somepath/path1/&quot;</span>);
 
 route1.handler(routingContext -&gt; {

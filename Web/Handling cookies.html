@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.21" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.21" data-basepath=".." data-revision="Mon Sep 07 2015 16:02:23 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1527,25 +1527,35 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>Handling cookies
-Vert.x-Web has cookies support using the CookieHandler.</p>
-<p>You should make sure a cookie handler is on a matching route for any requests that require this functionality.</p>
-<p>router.route().handler(CookieHandler.create());
-Manipulating cookies
-You use getCookie to retrieve a cookie by name, or use cookies to retrieve the entire set.</p>
-<p>To remove a cookie, use removeCookie.</p>
-<p>To add a cookie use addCookie.</p>
-<p>The set of cookies will be written back in the response automatically when the response headers are written so the browser can store them.</p>
-<p>Cookies are described by instances of Cookie. This allows you to retrieve the name, value, domain, path and other normal cookie properties.</p>
-<p>Here&#x2019;s an example of querying and adding cookies:</p>
-<p>router.route().handler(CookieHandler.create());</p>
-<p>router.route(&quot;some/path/&quot;).handler(routingContext -&gt; {</p>
-<p>  Cookie someCookie = routingContext.getCookie(&quot;mycookie&quot;);
-  String cookieValue = someCookie.getValue();</p>
-<p>  // Do something with cookie...</p>
-<p>  // Add a cookie - this will get written back in the response automatically
-  routingContext.addCookie(Cookie.cookie(&quot;othercookie&quot;, &quot;somevalue&quot;));
-});</p>
+                        <h1 id="handling-cookies">Handling cookies</h1>
+<p><code>Vert.x-Web</code>&#x4F7F;&#x7528;<code>CookieHandler</code>&#x6765;&#x652F;&#x6301;<code>cookies</code>.</p>
+<p>&#x4F60;&#x5FC5;&#x987B;&#x786E;&#x4FDD;&#x5F53;&#x8BF7;&#x6C42;&#x9700;&#x8981;<code>cookies</code>&#x652F;&#x6301;&#x7684;&#x65F6;&#x5019;,&#x4F60;&#x5DF2;&#x7ECF;&#x8BBE;&#x7F6E;&#x4E0A;&#x4E86;<code>cookie handler</code>&#x3002;</p>
+<pre><code class="lang-java">router.route().handler(CookieHandler.create());
+</code></pre>
+<h3 id="manipulating-cookies">Manipulating cookies</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5411;<code>getCookie()</code>&#x65B9;&#x6CD5;, &#x6216;&#x8005;&#x901A;&#x8FC7;<code>cookies()</code>&#x65B9;&#x6CD5;&#x68C0;&#x7D22;&#x51FA;<code>cookie</code>&#x96C6;&#x5408;.</p>
+<ul>
+<li><code>getCookie()</code>, &#x4F20;&#x9012;&#x4E00;&#x4E2A;<code>cookie name</code>&#x7684;&#x53C2;&#x6570;&#x6765;&#x68C0;&#x7D22;&#x51FA;&#x4E00;&#x4E2A;<code>cookie</code></li>
+<li><code>cookies()</code>, &#x68C0;&#x7D22;&#x51FA;<code>cookie</code>&#x96C6;&#x5408;</li>
+<li><code>removeCookie</code>, &#x5220;&#x9664;&#x4E00;&#x4E2A;<code>cookie</code></li>
+<li><code>addCookie</code>, &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>cookie</code></li>
+</ul>
+<p>&#x5F53;<code>response headers</code>&#x88AB;&#x5199;&#x56DE;&#x7684;&#x65F6;&#x5019;, <code>cookies</code>&#x96C6;&#x5408;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x88AB;&#x5199;&#x5165;&#x5230;<code>response</code>&#x4E2D;.</p>
+<p><code>Cookies</code>&#x662F;&#x901A;&#x8FC7;<code>Cookie</code>&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#x7684;. &#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5;&#x5B9E;&#x4F8B;&#x68C0;&#x7D22;&#x51FA;<code>cookie</code>&#x4E2D;&#x7684;<code>name</code>, <code>value</code>, <code>domain</code>, <code>path</code> &#x6216;&#x8005;&#x5176;&#x4ED6;&#x7684;<code>cookie</code>&#x5C5E;&#x6027;.</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6F14;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x68C0;&#x7D22;&#x548C;&#x6DFB;&#x52A0;<code>cookie</code></p>
+<pre><code class="lang-java">router.route().handler(CookieHandler.create());
+
+router.route(<span class="hljs-string">&quot;some/path/&quot;</span>).handler(routingContext -&gt; {
+
+  Cookie someCookie = routingContext.getCookie(<span class="hljs-string">&quot;mycookie&quot;</span>);
+  String cookieValue = someCookie.getValue();
+
+  <span class="hljs-comment">// Do something with cookie...</span>
+
+  <span class="hljs-comment">// Add a cookie - this will get written back in the response automatically</span>
+  routingContext.addCookie(Cookie.cookie(<span class="hljs-string">&quot;othercookie&quot;</span>, <span class="hljs-string">&quot;somevalue&quot;</span>));
+});
+</code></pre>
 
                     
                     </section>

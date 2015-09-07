@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.22" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.22" data-basepath=".." data-revision="Mon Sep 07 2015 16:02:23 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1527,18 +1527,18 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>Handling sessions
-Vert.x-Web provides out of the box support for sessions.</p>
+                        <h1 id="handling-sessions">Handling sessions</h1>
+<p><code>Vert.x-Web</code> &#x540C;&#x6837;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x4E8E;<code>session</code>&#x7684;&#x652F;&#x6301;.</p>
 <p>Sessions last between HTTP requests for the length of a browser session and give you a place where you can add session-scope information, such as a shopping basket.</p>
 <p>Vert.x-Web uses session cookies to identify a session. The session cookie is temporary and will be deleted by your browser when it&#x2019;s closed.</p>
 <p>We don&#x2019;t put the actual data of your session in the session cookie - the cookie simply uses an identifier to look-up the actual session on the server. The identifier is a random UUID generated using a secure random, so it should be effectively unguessable.</p>
 <p>Cookies are passed across the wire in HTTP requests and responses so it&#x2019;s always wise to make sure you are using HTTPS when sessions are being used. Vert.x will warn you if you attempt to use sessions over straight HTTP.</p>
 <p>To enable sessions in your application you must have a SessionHandler on a matching route before your application logic.</p>
 <p>The session handler handles the creation of session cookies and the lookup of the session so you don&#x2019;t have to do that yourself.</p>
-<p>Session stores
-To create a session handler you need to have a session store instance. The session store is the object that holds the actual sessions for your application.</p>
+<h2 id="session-stores">Session stores</h2>
+<p>To create a session handler you need to have a session store instance. The session store is the object that holds the actual sessions for your application.</p>
 <p>Vert.x-Web comes with two session store implementations out of the box, and you can also write your own if you prefer.</p>
-<p>Local session store</p>
+<h4 id="local-session-store">Local session store</h4>
 <p>With this store, sessions are stored locally in memory and only available in this instance.</p>
 <p>This store is appropriate if you have just a single Vert.x instance of you are using sticky sessions in your application and have configured your load balancer to always route HTTP requests to the same Vert.x instance.</p>
 <p>If you can&#x2019;t ensure your requests will all terminate on the same server then don&#x2019;t use this store as your requests might end up on a server which doesn&#x2019;t know about your session.</p>
@@ -1552,8 +1552,8 @@ To create a session handler you need to have a session store instance. The sessi
 SessionStore store2 = LocalSessionStore.create(vertx, &quot;myapp3.sessionmap&quot;);</p>
 <p>// Create a local session store specifying the local shared map name to use and
 // setting the reaper interval for expired sessions to 10 seconds
-SessionStore store3 = LocalSessionStore.create(vertx, &quot;myapp3.sessionmap&quot;, 10000);
-Clustered session store</p>
+SessionStore store3 = LocalSessionStore.create(vertx, &quot;myapp3.sessionmap&quot;, 10000);</p>
+<h4 id="clustered-session-store">Clustered session store</h4>
 <p>With this store, sessions are stored in a distributed map which is accessible across the Vert.x cluster.</p>
 <p>This store is appropriate if you&#x2019;re not using sticky sessions, i.e. your load balancer is distributing different requests from the same browser to different servers.</p>
 <p>Your session is accessible from any node in the cluster using this store.</p>
@@ -1567,9 +1567,9 @@ Clustered session store</p>
   // This might be useful if you have more than one application in the cluster
   // and want to use different maps for different applications
   SessionStore store2 = ClusteredSessionStore.create(vertx, &quot;myclusteredapp3.sessionmap&quot;);
-});
-Creating the session handler
-Once you&#x2019;ve created a session store you can create a session handler, and add it to a route. You should make sure your session handler is routed to before your application handlers.</p>
+});</p>
+<h2 id="creating-the-session-handler">Creating the session handler</h2>
+<p>Once you&#x2019;ve created a session store you can create a session handler, and add it to a route. You should make sure your session handler is routed to before your application handlers.</p>
 <p>You&#x2019;ll also need to include a CookieHandler as the session handler uses cookies to lookup the session. The cookie handler should be before the session handler when routing.</p>
 <p>Here&#x2019;s an example:</p>
 <p>Router router = Router.router(vertx);</p>
@@ -1587,8 +1587,8 @@ router.route(&quot;/somepath/blah/&quot;).handler(routingContext -&gt; {</p>
   // etc</p>
 <p>});
 The session handler will ensure that your session is automatically looked up (or created if no session exists) from the session store and set on the routing context before it gets to your application handlers.</p>
-<p>Using the session
-In your handlers you an access the session instance with session.</p>
+<h2 id="using-the-session">Using the session</h2>
+<p>In your handlers you an access the session instance with session.</p>
 <p>You put data into the session with put, you get data from the session with get, and you remove data from the session with remove.</p>
 <p>The keys for items in the session are always strings. The values can be any type for a local session store, and for a clustered session store they can be any basic type, or Buffer, JsonObject, JsonArray or a serializable object, as the values have to serialized across the cluster.</p>
 <p>Here&#x2019;s an example of manipulating session data:</p>
@@ -1606,8 +1606,8 @@ router.route(&quot;/somepath/blah&quot;).handler(routingContext -&gt; {</p>
 <p>});
 Sessions are automatically written back to the store after after responses are complete.</p>
 <p>You can manually destroy a session using destroy. This will remove the session from the context and the session store. Note that if there is no session a new one will be automatically created for the next request from the browser that&#x2019;s routed through the session handler.</p>
-<p>Session timeout
-Sessions will be automatically timed out if they are not accessed for a time greater than the timeout period. When a session is timed out, it is removed from the store.</p>
+<h2 id="session-timeout">Session timeout</h2>
+<p>Sessions will be automatically timed out if they are not accessed for a time greater than the timeout period. When a session is timed out, it is removed from the store.</p>
 <p>Sessions are automatically marked as accessed when a request arrives and the session is looked up and and when the response is complete and the session is stored back in the store.</p>
 <p>You can also use setAccessed to manually mark a session as accessed.</p>
 <p>The session timeout can be configured when creating the session handler. Default timeout is 30 minutes.</p>

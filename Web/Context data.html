@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.16" data-basepath=".." data-revision="Tue Sep 01 2015 14:38:22 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.16" data-basepath=".." data-revision="Mon Sep 07 2015 16:02:23 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1528,10 +1528,8 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="context-data">Context data</h1>
-<p>You can use the context data in the RoutingContext to maintain any data that you want to share between handlers for the lifetime of the request.</p>
-<p>Here&#x2019;s an example where one handler sets some data in the context data and a subsequent handler retrieves it:</p>
-<p>You can use the put to put any object, and get to retrieve any object from the context data.</p>
-<p>A request sent to path /some/path/other will match both routes.</p>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x5185;, &#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x60F3;&#x8981;&#x5728;<code>handler</code>&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x7684;&#x6570;&#x636E;&#x653E;&#x5728;<code>RoutingContext</code>&#x4E2D;&#x8FDB;&#x884C;&#x4F20;&#x9012;.</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;,&#x4F7F;&#x7528;<code>put</code>&#x6DFB;&#x52A0;&#x6570;&#x636E;, &#x4F7F;&#x7528;<code>get</code>&#x68C0;&#x7D22;&#x6570;&#x636E;.</p>
 <pre><code class="lang-java">router.get(<span class="hljs-string">&quot;/some/path&quot;</span>).handler(routingContext -&gt; {
 
   routingContext.put(<span class="hljs-string">&quot;foo&quot;</span>, <span class="hljs-string">&quot;bar&quot;</span>);
@@ -1547,7 +1545,6 @@ router.get(<span class="hljs-string">&quot;/some/path/other&quot;</span>).handle
 
 });
 </code></pre>
-<p>Alternatively you can access the entire context data map with data.</p>
 
                     
                     </section>
